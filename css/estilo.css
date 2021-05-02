@@ -1,0 +1,29 @@
+body{
+    background-image: url("../imagens/fundo.png");
+    background-color: #2e2759;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.container_login{ /* caixa de login */
+
+    /* tamanho da caixa de login */
+    height: 400px;
+    width: 400px;
+
+    /* centralizar a caixa de login */
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+
+}
+
+#inf_login{
+    color: white;
+    font-weight: bold;
+}
+
+
