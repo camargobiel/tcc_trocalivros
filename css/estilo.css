@@ -1,34 +1,17 @@
+@-ms-viewport {
+    width: device-width;
+}
+
 body{
-    background-image: url("../imagens/fundo.png");
-    background-color: #2e2759;
+    background-color: #151515;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    margin: 0;
     
 }
 
-.container_login{ /* caixa de login */
-
-    /* tamanho da caixa de login */
-    height: 400px;
-    width: 400px;
-
-    /* centralizar a caixa de login */
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    margin: auto;
-
+.nav_bar_fixed {
+    background-color: #301b3f; height: 9%;
+    
 }
-
-#inf_login{
-    color: white;
-    font-weight: bold;
-}
-
-img {
-    width: 50px;
-    height: 40px;
-}
-
-
