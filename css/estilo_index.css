@@ -1,0 +1,51 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    background-color: #151515 !important;
+    
+}
+
+.titulo_mais_trocados {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.img_card {
+    width:200px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top:25px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-subtitle {
+    color:gray;
+}
+
+.card_livro {
+    width: 250px; 
+    float:left; 
+    margin-right:20px;
+    background-color: #362e3b;
+    border-radius: 20px;
+    height: 500px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.card_title {
+    color:white;
+}
+
+.center_cards {
+    width: 60%;
+    margin: 0 auto;
+}

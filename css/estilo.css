@@ -1,17 +1,2 @@
-@-ms-viewport {
-    width: device-width;
-}
 
-body{
-    background-color: #151515;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 0;
-    
-}
 
-.nav_bar_fixed {
-    background-color: #301b3f; height: 9%;
-    
-}

@@ -1,0 +1,51 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    background-color: #151515 !important;
+    
+}
+
+.capa_livro {
+    margin-top: 60px;
+    margin-left: 50px;
+    width: 400px;
+    float:left;
+}
+
+.descricao_div {
+    width: 45rem;
+    height: 30rem;
+    margin-top: 30px;
+    margin-left: 500px;
+     
+}
+
+.titulo_livro {
+    margin-top: 60px;
+    margin-left: 500px;
+    color:white;
+}
+
+p {
+    word-wrap: break-word;
+    text-align: justify;
+    margin-right: 20px;
+    font: 16px Arial, sans-serif;
+    color:white;
+}
+
+.nome_autor {
+    color: white;
+}
+
+.anunciantes {
+    height: 500px;
+    width: 200px;
+    background-color: white;
+    float:left;
+}
+
+
+

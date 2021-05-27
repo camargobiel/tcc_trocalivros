@@ -1,0 +1,73 @@
+.nav_bar_fixed { /* navbar */
+    background-color: #301b3f; 
+    height: 70px;
+ 
+}
+
+@media(max-width: 1000px){
+    .nav_bar_fixed {
+        background-color: #301b3f; 
+        height: 15%;
+    }
+    .barra_pesquisa {
+        width: 50px;
+        height: 40px;
+
+    }
+
+
+    
+}
+
+.icone_nav_logo {
+    width: 150px;
+    height: 50px;
+    position: relative;
+}
+
+.botao_pesquisar {
+    background-color: #B777E3;
+    border: 1px solid #151515;
+    border-radius: 4px;
+    margin-right:20px;
+    
+}
+
+.botao_pesquisar:hover{
+    background-color: #D29EF5;
+    border: 1px solid #151515;
+}
+
+.barra_pesquisa {
+    width: 400px;
+    display: block;
+}
+
+.navbar_items:link{
+    color:white;
+}
+
+.navbar_items:hover{
+    color:rgb(194, 194, 194);
+}
+
+.navbar_items:visited{
+    color:white;
+}
+
+.navbar_items:visited:hover{
+    color:rgb(194, 194, 194);
+}
+
+.icone_login {
+    width: 35px;
+    height: 35px;
+}
+
+.center {
+    width: 55%;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 0 auto;
+    
+}

@@ -1,4 +1,8 @@
-body{
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
     background-image: url("../imagens/fundo.png");
     background-color: #151515;
     background-repeat: no-repeat;
@@ -8,7 +12,7 @@ body{
     
 }
 
-.container_login{ /* caixa de login */
+.container_login { /* caixa de login */
 
     /* tamanho da caixa de login */
     height: 400px;
@@ -22,45 +26,9 @@ body{
 
 }
 
-#inf_login{
+#inf_login { /* deixar fonte branca */
     color: white;
 }
 
-.nav_bar_fixed {
-    background-color: #301b3f; height: 9%;
-    
-}
 
-@-ms-viewport {
-    width: device-width;
-}
-
-.logo {
-    width: 60px;
-    height:60px; 
-    
-}
-
-.barra_pesquisa {
-    margin: 0 auto;
-    width: 500px;
-    display: inline-block;
-
-}
-
-@media(max-width: 1000px){
-    .nav_bar_fixed {
-        background-color: #301b3f; 
-        height: 13%;
-    }
-    .barra_pesquisa {
-        margin: 0 auto;
-        width: 250px;  
-    }
-}
-
-.imge {
-    width: 250px;
-    height: 60px;
-}
 
