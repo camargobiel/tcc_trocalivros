@@ -24,7 +24,7 @@
         <!-- <div class = "barra_pesquisa"> -->
         <input class="form-control barra_pesquisa" type="search" placeholder="Pesquisar livros" aria-label="Search">
         <!-- </div> -->
-          &nbsp;<button class="botao_pesquisar" type="submit"> Pesquisar </button>
+          &nbsp;<a href = "tela_pesquisar.php"> <button class="botao_pesquisar" type="submit">  Pesquisar </button> </a>
       </form>
 
       <a class="nav-link active navbar_items" aria-current="page" href="tela_login.php" style = "text-align:right;"> 

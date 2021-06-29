@@ -7,45 +7,86 @@ body {
     
 }
 
-.titulo_mais_trocados {
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+.centralizar_cards {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.card_livro {
+    width:200px;
+    float:left; 
+    margin-right:10px;
+    border-radius: 20px;
+    height: 300px;
 }
 
 .img_card {
     width:200px;
     height: 300px;
     border-radius: 20px;
-    margin-top:25px;
     display:block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.card-subtitle {
-    color:gray;
+.livro_hover {
+    position: relative;
 }
 
-.card_livro {
-    width: 250px; 
-    float:left; 
-    margin-right:20px;
-    background-color: #362e3b;
-    border-radius: 20px;
-    height: 500px;
+.livro_hover:hover .img_card {
+    opacity: 0.3;
 }
 
-.card-text {
+.livro_hover:hover .img_card1 {
+    opacity: 0.3;
+}
+
+.recomendado_livros {
+    color: white;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.card_title {
+
+.card_livro1 {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 180px; 
+    height: 250px;
+    float:left; 
+    border-radius: 40px;
+    
+}
+
+.img_card1 {
+    width: 180px;
+    height: 250px;
+    border-radius: 30px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.todos_anuncios {
+    margin-left: 20px;
     color:white;
+    width: 60%;
+    
 }
 
-.center_cards {
-    width: 60%;
-    margin: 0 auto;
+.a {
+    width: 90%;
+    margin-left: 75px;
+    margin-top: 400px;
+}
+
+.centralizar_semelhantes {
+    width: 20%;
+    margin-top: 400px;
+}
+
+.asdas{
+    margin-left:40px; 
+    width:80%;
 }

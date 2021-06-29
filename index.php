@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="pt">
   <head>
-    <title></title>
+    <title> Tela principal </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -11,46 +11,152 @@
   </head>
 <body>
   <?php include ('menu_login.php'); ?>
-  <div class="container-fluid">
-    <h3 class = "titulo_mais_trocados"> Os 4 livros mais trocados </h3>
-    
-    <div class = "center_cards">
-      <a href = "tela_livro.php">
-      <div class="card_livro ">
-        <div class = "bloco"> <img src="imagens/exemplo_livro1.jpg" class="img_card"> </div>
-        <div class="card-body">
-          <h4 class="card_title card-title card-text"> Revolução dos bichos </h4>  
-          <h5 class="card-subtitle card-text"> George Orwell </h5>  
-        </div>
-      </div> </a>
+  <div>
+    <h3 class = "recomendado_livros"> Recomendados por nós </h3>
 
-      <a href = "tela_livro.php">
-      <div class="card_livro">
-        <img src="imagens/exemplo_livro2.jpg" class="img_card" alt="...">
-          <div class="card-body">
-            <h4 class="card_title card-title card-text"> 1984 </h4>  
-            <h5 class="card-subtitle card-text"> George Orwell </h5>
-          </div>
-      </div> </a>
-      
-      <a href = "tela_livro.php">
-      <div class="card_livro">
-        <img src="imagens/exemplo_livro3.jpg" class="img_card" alt="...">
-          <div class="card-body">
-            <h4 class="card_title card-title card-text"> Demon Slayer vol. 1 </h4>  
-            <h5 class="card-subtitle card-text"> Koyoharu Gotouge </h5>
-          </div>
-      </div> </a>
+    <div class = "centralizar_cards">
 
+    <div class = "card_livro livro_hover">
       <a href = "tela_livro.php">
-      <div class="card_livro">
-        <img src="imagens/exemplo_livro5.jpg" class="img_card" alt="...">
-          <div class="card-body">
-            <h4 class="card_title card-title card-text"> O Capital </h4>  
-            <h5 class="card-subtitle card-text"> Karl Marx </h5>
-          </div>
-      </div> </a>
-
+        <img src="imagens/exemplo_livro1.jpg" class="img_card">
+      </a>
     </div>
+
+    <div class = "card_livro livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro">
+          <img src="imagens/exemplo_livro2.jpg" class="img_card">
+        </div>
+      </a>
+    </div>  
+
+    <div class = "card_livro livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro">
+          <img src="imagens/exemplo_livro3.jpg" class="img_card">
+        </div>
+      </a>
+    </div> 
+
+    <div class = "card_livro livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro">
+          <img src="imagens/exemplo_livro5.jpg" class="img_card">
+        </div> 
+      </a>
+    </div> 
+    
+    </div>  
+  </div> 
+
+  <div class = "a"> 
+    <h3 class = "todos_anuncios" > Todos os anúncios </h3> <br>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro6.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro7.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro8.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro9.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro10.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro11.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro12.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro13.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div> 
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro14.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro15.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro16.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro17.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+    <div class = "card_livro1 livro_hover">
+      <a href = "tela_livro.php">
+        <div class="card_livro1">
+          <img src="imagens/exemplo_livro18.jpg" class="img_card1" alt="...">
+        </div> 
+      </a>
+    </div>
+
+  </div>
+  
 </body>
 </html>

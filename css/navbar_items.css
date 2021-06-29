@@ -26,6 +26,7 @@
 }
 
 .botao_pesquisar {
+    height:40px;
     background-color: #B777E3;
     border: 1px solid #151515;
     border-radius: 4px;
