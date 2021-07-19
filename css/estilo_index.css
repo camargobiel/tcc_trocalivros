@@ -7,86 +7,78 @@ body {
     
 }
 
-.centralizar_cards {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.card_livro {
-    width:200px;
-    float:left; 
-    margin-right:10px;
-    border-radius: 20px;
-    height: 300px;
-}
-
-.img_card {
+.card_livro{
+    position: relative;
+    margin-right: 10px;
     width:200px;
     height: 300px;
-    border-radius: 20px;
-    display:block;
+    border-radius: 15px;
+}
+
+.card_livro:hover{
+    opacity: 0.2;
+}
+
+
+.tabela_livros_inicial{
     margin-left: auto;
     margin-right: auto;
 }
 
-.livro_hover {
-    position: relative;
-}
-
-.livro_hover:hover .img_card {
-    opacity: 0.3;
-}
-
-.livro_hover:hover .img_card1 {
-    opacity: 0.3;
-}
-
-.recomendado_livros {
-    color: white;
-    text-align: center;
+.titulo{
     margin-top: 20px;
     margin-bottom: 30px;
-}
-
-
-.card_livro1 {
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 180px; 
-    height: 250px;
-    float:left; 
-    border-radius: 40px;
-    
-}
-
-.img_card1 {
-    width: 180px;
-    height: 250px;
-    border-radius: 30px;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.todos_anuncios {
-    margin-left: 20px;
+    text-align: center;
     color:white;
-    width: 60%;
+}
+
+.titulo_todos{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color:white;
+}
+
+.card_livro_todos{
+    margin-left: 10px;
+    width:170px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+.card_livro_todos:hover{
+    opacity: 0.2;
+}
+
+@media only screen and (max-width: 700px){
+    .card_livro{
+        margin-right: 5px;
+        width: 120px;
+        height: 180px;
+        border-radius: 15px;
+    }
+
+    .card_livro_todos{
+        margin-left: 10px;
+        width:120px;
+        height: 180px;
+        border-radius: 15px;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    .titulo_todos {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .tabela_livros_todos{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     
 }
 
-.a {
-    width: 90%;
-    margin-left: 75px;
-    margin-top: 400px;
-}
-
-.centralizar_semelhantes {
-    width: 20%;
-    margin-top: 400px;
-}
-
-.asdas{
-    margin-left:40px; 
-    width:80%;
-}

@@ -1,42 +1,39 @@
 .nav_bar_fixed { /* navbar */
     background-color: #301b3f; 
+    width:100%;
     height: 70px;
  
 }
 
-@media(max-width: 1000px){
-    .nav_bar_fixed {
-        background-color: #301b3f; 
-        height: 15%;
-    }
-    .barra_pesquisa {
-        width: 50px;
-        height: 40px;
 
-    }
-
-
-    
-}
 
 .icone_nav_logo {
-    width: 150px;
-    height: 50px;
+    background-image: url('../imagens/logo_teste.png');
+    background-repeat: no-repeat;
+    background-size: 150px;
+    width: 140px;
+    height: 60px;
     position: relative;
 }
 
 .botao_pesquisar {
     height:40px;
-    background-color: #B777E3;
+    background-color: #5e17eb;
+    color:white;
     border: 1px solid #151515;
     border-radius: 4px;
     margin-right:20px;
     
 }
 
-.botao_pesquisar:hover{
-    background-color: #D29EF5;
+.botao_logar {
+    height:40px;
+    background-color: #5e17eb;
+    color:white;
     border: 1px solid #151515;
+    border-radius: 4px;
+    margin-right:20px;
+    
 }
 
 .barra_pesquisa {
@@ -44,31 +41,43 @@
     display: block;
 }
 
-.navbar_items:link{
-    color:white;
-}
-
-.navbar_items:hover{
-    color:rgb(194, 194, 194);
-}
-
-.navbar_items:visited{
-    color:white;
-}
-
-.navbar_items:visited:hover{
-    color:rgb(194, 194, 194);
-}
-
-.icone_login {
-    width: 35px;
-    height: 35px;
-}
-
 .center {
     width: 55%;
     top: 0; bottom: 0;
     left: 0; right: 0;
     margin: 0 auto;
+    
+}
+
+@media only screen and (max-width: 700px){
+    .nav_bar_fixed { 
+        height: 150px;
+    }
+    
+    .icone_nav_logo {
+        background-image: url('../imagens/celular_logo.png');
+        background-repeat: no-repeat;
+        background-size: 90px;
+        width: 80px;
+        height: 80px;
+        position: relative;
+    }
+
+    .barra_pesquisa {
+        width: 150px;
+    }
+
+    .botao_logar {
+        margin-top: 10px;
+        height: 100%;
+        width: 200px;
+        
+    }
+    
+
+    
+
+    
+
     
 }
