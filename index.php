@@ -11,9 +11,8 @@
     <script type="text/javascript" src="js/bootstrap.min.js"> </script>
   </head>
 <body>
-  <?php include ('menu_login.php'); ?>
+    <?php include ('navbar.php'); ?>
     <h1 class = "titulo"> Livros recomendados por nós </h1>
-
     <table class = "tabela_livros_inicial">
       <tr>
 
@@ -36,13 +35,13 @@
 
     <table class = "tabela_livros_todos">
       <tr>
-        <th rowspan = "2"> 
           <td> <a href = ""> <img src = "imagens/exemplo_livro3.jpg" class = "card_livro_todos"> </a> </td>
           <td> <a href = ""> <img src = "imagens/exemplo_livro11.jpg" class = "card_livro_todos"> </a> </td>
           <td> <a href = ""> <img src = "imagens/exemplo_livro5.jpg" class = "card_livro_todos"> </a> </td>
           
-        </th>
       </tr>
+      
+      
     </table>
 
     

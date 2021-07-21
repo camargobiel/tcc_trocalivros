@@ -10,19 +10,17 @@
     <script type="text/javascript" src="js/bootstrap.min.js"> </script>
   </head>
   <body> 
-  <?php 
-    include ('menu_login.php')
-  ?>
+      <?php include ('navbar.php'); ?>
     <div class = "container">
       <div class = "container_login">
-        <form>
-          <div class="mb-3">
-            <label for="email_input" class="form-label" id = "inf_login"> E-mail </label> 
-            <input type="text" class="form-control" id="email_input"> <!-- input do login -->
+        <form action = "sistema_login.php" method = "POST">
+          <div class="mb-3"> 
+            <label for="email" class="form-label" id = "inf_login"> E-mail </label> 
+            <input type="text" class="form-control" name = "email" required> <!-- input do login -->
           </div>
           <div class="mb-3">
-            <label for="senha_input" class="form-label" id = "inf_login"> Senha </label>
-            <input type="password" class="form-control" id="senha_input"> <!-- input da senha -->
+            <label for="senha" class="form-label" id = "inf_login"> Senha </label>
+            <input type="password" class="form-control" name = "senha" required> <!-- input da senha -->
           </div>
           <p> <a href = "tela_registro.php"> Não tem cadastro? Cadastre-se aqui </a> </p>
           <button type="submit" class="btn" style="width: 100%; background-color: #301b3f;" id = "inf_login"> Logar </button>
