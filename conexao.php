@@ -1,5 +1,5 @@
 <?php
 
- $conn=mysqli_connect("localhost", "root", "","banco_tcc");
+ $conn=mysqli_connect("localhost", "root", "","bd_tcc");
 
 ?>
