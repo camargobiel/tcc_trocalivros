@@ -7,4 +7,5 @@
 * 29/06/2021: Projeto pronto para ser apresentado na pré-banca;
 * 19/07/2021: Tela principal responsiva;
 * 21/07/2021: Sistema de login e registro funcionando;
-* 23/07/2021: Sistema de foto de perfil funcionando.
+* 23/07/2021: Sistema de foto de perfil funcionando;
+* 26/07/2021: Tela de perfil funcionando.
