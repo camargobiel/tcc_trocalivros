@@ -9,7 +9,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    </head>
+
+</head>
 <body>
   <nav class="navbar nav_bar_fixed navbar-expand-lg">
     <div class="container-fluid"> 
@@ -25,7 +26,7 @@
       <div class = "fixado">
         <form class="d-flex">
           <input class="form-control barra_pesquisa" type="search" placeholder="Pesquisar livros" aria-label="Search" required>
-            &nbsp;<a href = "tela_pesquisar.php"> 
+            &nbsp;<a href = "telas/tela_pesquisar.php"> 
                     <button class="botao_pesquisar hvr-sweep-to-right" type="submit">  
                       Pesquisar 
                     </button> 
@@ -44,7 +45,7 @@
               </button>
               <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
                 <li><a class='dropdown-item' href='tela_perfil.php'>Ver perfil</a></li>
-                <li><a class='dropdown-item' href='#'>Meus anúncios</a></li>
+                <li><a class='dropdown-item' href='tela_anuncio.php'> Meus anúncios </a></li>
                 <li><a class='dropdown-item' style = 'background-color:red; color:white;' href='sair.php'>Sair</a></li>
               </ul>
             </div>";

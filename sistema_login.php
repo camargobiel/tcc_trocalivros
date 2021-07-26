@@ -21,7 +21,7 @@
             /*2- verificando se a conexao foi estabelecida */
              if($conn==true){
             
-			    $sql="select email, senha from tb_usuario where email='$email' 
+			    $sql="select * from tb_usuario where email='$email' 
                 and senha='$senha'";
            	    $verifica=mysqli_query($conn, $sql);
 			              
@@ -32,11 +32,11 @@
                 }else{
                     //echo "Usuário encontrado";
                     if ($dados=mysqli_fetch_assoc($verifica)) {
-                        $n=$dados["email"];
+                        $email=$dados["email"];
                         
                         session_start();
                         
-                        $_SESSION["email"]=$n;
+                        $_SESSION["email"]=$email;
                         header("location:index.php");
                     }
 				 

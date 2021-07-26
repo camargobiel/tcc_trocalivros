@@ -1,0 +1,14 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    background-color: #151515 !important;
+    
+}
+
+.titulo_anuncios{
+    text-align: center;
+    color:white;
+    margin-top: 20px;
+}

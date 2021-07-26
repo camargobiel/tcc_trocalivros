@@ -10,7 +10,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"> </script>
 </head>
 <body>
-    <?php include ('menu_login.php'); ?>       
+    <?php include ('navbar.php'); ?>       
     <div> 
         <img src="imagens/exemplo_livro1.jpg" class = "capa_livro">  
     </div>

@@ -39,7 +39,6 @@
             </script>
             ";
             echo '<script type="text/javascript">location.replace("tela_login.php");</script>';
-
         }else{
             echo '
             <script type="text/javascript">

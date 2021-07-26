@@ -1,3 +1,7 @@
+@-ms-viewport {
+    width: device-width;
+}
+
 .nav_bar_fixed { /* navbar */
     background-color: #301b3f; 
     width:100%;
