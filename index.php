@@ -30,7 +30,7 @@
 
       </tr>
     </table>
-
+    
     <h1 class = "titulo_todos"> Todos os anúncios </h1>
 
     <table class = "tabela_livros_todos">
