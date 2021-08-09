@@ -46,7 +46,9 @@
               <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
                 <li><a class='dropdown-item' href='tela_perfil.php'>Ver perfil</a></li>
                 <li><a class='dropdown-item' href='tela_anuncio.php'> Meus anúncios </a></li>
+                <li><a class='dropdown-item' href='chat-index.php'> Chat </a></li>
                 <li><a class='dropdown-item' style = 'background-color:red; color:white;' href='sair.php'>Sair</a></li>
+
               </ul>
             </div>";
             //echo "<div style = 'color:white;'> olá, " . $_SESSION["email"] . "</div>";

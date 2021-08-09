@@ -11,6 +11,8 @@
 </head>
 <body>
  <?php   
+
+
             /*pegando os dados vindos do formulario */
                 $email = $_POST["email"];
                 $senha = $_POST["senha"];
@@ -33,9 +35,8 @@
                     //echo "Usuário encontrado";
                     if ($dados=mysqli_fetch_assoc($verifica)) {
                         $email=$dados["email"];
-                        
                         session_start();
-                        
+                        $_SESSION["id"] = $dados["id_usuario"];
                         $_SESSION["email"]=$email;
                         header("location:index.php");
                     }
