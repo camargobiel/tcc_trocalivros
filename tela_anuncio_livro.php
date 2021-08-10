@@ -15,6 +15,7 @@
 </head>
 <body> 
 <?php 
+    
     include ('conexao.php');
     include ('navbar.php');
     $email = $_SESSION["email"];
@@ -39,18 +40,25 @@
             while($row = mysqli_fetch_assoc($resultado)){
                 $id = $row["id_usuario"];
             }
-        }
-                
-?>
 
-    <form action="tela_cadastro_anuncio.php" method = "POST"  enctype="multipart/form-data">
+            
+        }
+    
+        ?>
+    <h1 class = "titulo texto"> Cadastrar livro </h1>
+    <form action="tela_anuncio_livro.php" method = "POST">
         <div class = "container_cadastro">
             <div class="mb-3"> 
                 <label for="titulo" class="form-label titulo_livro_input texto"> Título do livro </label> 
                 <input type="text" class="form-control" name = "titulo">
             </div>
             <button type="submit" class="btn" style="width: 100%; background-color: #301b3f;color:white;margin-bottom:10px;" id = "enviarLivro"> Buscar livro </button>
-            <div class="mb-3"> 
+    </div>
+    </form>
+
+    <form action = "teste.php" method = "POST">
+        <div class = "container_cadastro">  
+        <div class="mb-3"> 
                 <label for="titulo_livro" class="form-label texto"> Titulo </label> 
                 <input type="text" class="form-control" name = "titulo_livro" value = "<?php if(!empty($_POST['titulo'])){echo $armazenaTitulo;} ?>">
             </div>
@@ -58,46 +66,7 @@
                 <label for="autor" class="form-label texto"> Autor(es) </label> 
                 <input type="text" class="form-control" name = "autor" value = "<?php if(!empty($_POST['titulo'])){print $strAutor;} ?>">
             </div>
-            
-                <p class = "texto"> Adicione fotos do livro</p>
-                <input type="file" class="texto" id="arquivo" name = "arquivo">
-                <button type="submit" class="btn" name = "enviarFoto" style="width: 100%; background-color: #301b3f;color:white;margin-top:20px;" id = "enviarFoto"> Enviar foto </button>
-        
-    <?php 
-        if(isset($_POST['enviarFoto'])){
-            if(($_FILES["arquivo"]["name"]!="")){
-                $pastaArquivos = 'fotos_livro/';
-                $nomeArquivo = $_FILES["arquivo"]["name"];
-                $nomeTemporario = $_FILES["arquivo"]["tmp_name"];
-      
-                if(move_uploaded_file($nomeTemporario,$pastaArquivos.$nomeArquivo)){
-                  include "conexao.php";
-                }
-
-                $sql = "insert into tb_anuncio (fotos_livro,cod_usuario) values ('$nomeArquivo','$id')";
-                $resultado = mysqli_query($conn, $sql);
-
-            }
-        }
-
-        $sql = "select * from tb_anuncio where cod_usuario = '$id'";
-        $resultado = mysqli_query($conn, $sql);
-        if($resultado->num_rows > 0){
-            while($row = mysqli_fetch_assoc($resultado)){
-                $foto_livro = $row["fotos_livro"];
-                echo "<img name = 'foto_livro' class = 'foto_livro' src = 'fotos_livro/". $foto_livro ."'>";
-            }
-            
-        }
-        
-
-    ?>
-    </div>
-    </form>
-
-    <form action = "sistema_cadastro_anuncio.php" method = "POST">
-        <div class = "container_cadastro">  
-            <button type="submit" class="btn" style="width: 100%; background-color: #301b3f;color:white;margin-top:20px;"> Cadastrar </button>
+            <button type="submit" class="btn" style="width: 100%; background-color: #301b3f;color:white;"> Próximo </button>
         </div>
     </form>
 

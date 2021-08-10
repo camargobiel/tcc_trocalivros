@@ -16,7 +16,7 @@
     <?php include('navbar.php'); ?>
 
     <h1 class = "titulo_anuncios"> Meus anúncios </h1>
-    <a href = "tela_cadastro_anuncio.php"> CADASTRAR ANUNCIO </a>
+    <a href = "tela_anuncio_livro.php"> CADASTRAR ANUNCIO </a>
 
     
 </body>
