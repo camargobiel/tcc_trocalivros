@@ -14,27 +14,16 @@
     <script src="js/scripts.js" type="text/javascript"> </script>
 </head>
 <body> 
+<?php
+include ('navbar.php');
+include ('conexao.php');
+include('codAnuncio_idAnuncio.php');
+?>
+
+<h1 class = "titulo texto"> Enviar fotos do livro </h1>
+
 
 <?php
-        include ('navbar.php');
-        include ('conexao.php');
-        $email = $_SESSION["email"];
-        $pegarID = "select * from tb_usuario where email = '$email'";
-        $resultado = mysqli_query($conn, $pegarID);
-        if($resultado->num_rows > 0){
-            while($row = mysqli_fetch_assoc($resultado)){
-                $id = $row["id_usuario"];
-            }
-        }
-
-        $sql = "select * from tb_anuncio where cod_usuario = '$id'";
-        $resultado = mysqli_query($conn, $sql);
-        if($resultado-> num_rows > 0){
-            while($row = mysqli_fetch_assoc($resultado)){
-                $id_anuncio = $row["id_anuncio"];
-            }
-        }
-        
         if(isset($_POST['enviarFoto'])){
             if(($_FILES["arquivo"]["name"]!="")){
                 $pastaArquivos = 'fotos_livro/';
@@ -52,22 +41,48 @@
         }
         $sql = "select * from tb_foto_anuncio where cod_anuncio = '$id_anuncio'";
         $resultado = mysqli_query($conn, $sql);
+        echo "<table class = 'fotos_livros'> 
+                <tr>";
         if($resultado-> num_rows > 0){
             while($row = mysqli_fetch_assoc($resultado)){
+                $id_foto = $row["id_foto"];
                 $foto_livro = $row["fotos_livro"];
-                echo "<img name = 'foto_livro' class = 'foto_livro' src = 'fotos_livro/". $foto_livro ."'>";
+                echo "
+                <td>
+                    <img name = 'foto_livro' class = 'foto_livro' src = 'fotos_livro/". $foto_livro ."'>                  
+                </td>";
             }
             
         }
+
+        echo "</tr>
+            </table>";
+
+    
         
 
 ?>
+<br><br>
+<form class = "enviarArquivo" action="tela_anuncio_foto_livro.php" method = "POST"  enctype="multipart/form-data">
+    <input type = "file" id = "arquivo" name = "arquivo" class = "arquivo"> <br>
+    <button type="submit" class="btn" id = "enviarFoto" name = "enviarFoto" style="width: 10%; background-color: #301b3f;color:white;margin-top:10px;margin-bottom:10px;"> Enviar fotos </button>
+</form>
 
-    <h1 class = "titulo texto"> Enviar fotos do livro </h1>
-    <form action="tela_anuncio_foto_livro.php" method = "POST"  enctype="multipart/form-data">
-        <input type = "file" id = "arquivo" name = "arquivo">
-        <button type = "submit" id = "enviarFoto" name = "enviarFoto"> aaaa </button>
-    </form>
+<form class = "enviarArquivo" action = "avaliacao_livro.php" method = "POST">
+    <h4 class = "titulo texto"> Qual o estado do livro de (1-5) </h4>
+    <input type = "radio" id = "estrela_1" name = "avaliacao" value = "1">
+    <label for="estrela_1" class = "estrelas" > 1  </label> 
+    <input type = "radio"  id = "estrela_2"  name = "avaliacao" value = "2">
+    <label for="estrela_2" class = "estrelas"> 2  </label> 
+    <input type = "radio" id = "estrela_3"  name = "avaliacao" value = "3">
+    <label for="estrela_3" class = "estrelas" > 3  </label> 
+    <input type = "radio" id = "estrela_4"  name = "avaliacao" value = "4">
+    <label for="estrela_4" class = "estrelas" > 4  </label> 
+    <input type = "radio" id = "estrela_5"  name = "avaliacao" value = "5">
+    <label for="estrela_5" class = "estrelas" > 5  </label> 
+    <br>
+    <button type="submit" class="btn" style="width: 10%; background-color: #301b3f;color:white;margin-top:10px;margin-bottom:10px;"> Finalizar anúncio </button>
+</form>
 
 </body>
 </html>

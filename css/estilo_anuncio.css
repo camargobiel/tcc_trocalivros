@@ -30,11 +30,48 @@ body {
 }
 
 .foto_livro{
-    width: 200px;
+    float:left;
+    position: relative;
+    margin-left: 10px;
+    width: 250px;
     height: 300px;
 }
 
 .titulo{
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.fotos_livros{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arquivo{
+    width: 360px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.enviarArquivo{
+    text-align: center;
+}
+
+.estrelas{
+    margin-left: 5px;
+    margin-right: 5px;
+    color:white;
+}
+
+.grupo_card{
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.card_anuncios{
+    height: 550px;
+    margin-top: 20px;
+    text-align: center;
+    width:300px;
 }
