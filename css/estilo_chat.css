@@ -7,20 +7,27 @@ body{
 }
 #chat{
     display: flex;
-    align-items: flex-end;
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 10px;
     
-    
-    background: #512c6b;
+    background: #6f26b86b;
     width: 800px;
     height: 70vh;
     border-radius: 5px;
     overflow: auto;
 }
 .mandando{
+    align-self: flex-end;
     background: #732642;
+    border-radius: 10px;
+    margin: 10px;
+    color: #fff;
+    padding: 10px;
+}
+.recebendo{
+    align-self: flex-start;
+    background: #ff0000;
     border-radius: 10px;
     margin: 10px;
     color: #fff;
