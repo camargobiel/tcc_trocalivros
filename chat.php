@@ -8,10 +8,10 @@ $sql =  mysqli_query($conn ,"SELECT * from chat2 where remetente_id = '$id_remet
 
 while ($key = mysqli_fetch_assoc($sql))
 {
-
-    echo "<p>";
+    
+    echo "<div class = 'mandando'>";
     echo $key['msg'];
-    echo "</p>";
+    echo "</div>";
 }
 
 ?>
