@@ -1,0 +1,32 @@
+body{
+    background-color: #151515 !important;
+}
+#chat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form input{
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 8px;
+    border: none;
+}
+.mensagem{
+    width: 450px;
+}
+form input::placeholder{
+    text-align: center;
+}
+.button{
+    background-color: #512c6b;
+    color: #fff;
+    border: none;
+    padding-right: 7px;
+    border-radius: 8px;
+}

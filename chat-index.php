@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat - 4Trade</title>
+    <link href="css/estilo_chat.css" rel="stylesheet" type="text/css">
     <script src="chat-ajax.js"></script>
 </head>
 <body>
+    <?php
+    include_once('navbar.php');
+    ?>
     <div id="chat">
     </div>
 
 
     <form method="post" action="chat-index.php">
-		<input type="text" name="mensagem" placeholder="mensagem">
-        <input type="text" name="destino" placeholder="para quem?">
-		<input type="submit" value="Enviar" name = submit>
+		<input type="text" name="mensagem" placeholder="Digite uma mensagem..." class="mensagem">
+        <input type="text" name="destino" placeholder="Para quem?">
+        <div class="button">
+        <input type="submit" value="Enviar" name = submit class="button"><img src="imagens/ponta-de-flecha-esquerda.png" alt="">
+        </div>
+		
 		
 	</form>
 	<?php
