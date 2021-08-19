@@ -12,8 +12,11 @@
     <?php
     include_once('navbar.php');
     ?>
-    <div id="chat">
+    <div class="chat-estilo">
+        <div id="chat">
+        </div>
     </div>
+   
 
 
     <form method="post" action="chat-index.php">
@@ -27,7 +30,7 @@
 	</form>
 	<?php
 		include_once("conexao.php");
-        session_start();
+        
         /* Pegando o ID do destinatário */
         $destinatario = $_POST['destino'];
         $busca_id_destino = mysqli_query($conn, "SELECT id_usuario from tb_usuario where nome = '$destinatario'");
