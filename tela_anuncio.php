@@ -19,7 +19,7 @@
         <tr>
             <td>
                 <a class="card card_anuncios" href = "tela_anuncio_livro.php" style = "color:black;"> <br><br>
-                    <img style = "margin-top:20px; width: 100%; " src="imagens/foto_adicionar.png" class="card-img-top">
+                    <center> <img style = "margin-top:20px; width: 70%; " src="imagens/foto_adicionar.png" class="card-img-top"></center>
                     <div class="card-body"><br><br><br><br>
                         <h5 class="card-title"> Criar um anúncio </h5>
                         <p class="card-text"> aqui é onde você pode criar anúncios de livros que você tem o interesse de trocar</p>
@@ -28,15 +28,34 @@
             </td> 
             <?php 
 
-                $sql = "select * from tb_anuncio where cod_usuario = '$id'";
+                $pegarID = "select * from tb_usuario where email = '$email'";
+                $resultado = mysqli_query($conn, $pegarID);
+                if($resultado-> num_rows > 0){
+                    while($row = mysqli_fetch_assoc($resultado)){
+                        $id = $row["id_usuario"];
+                    }
+                }
+
+                
+
+                $sql = "select
+                id_livro, 
+                titulo,
+                autor,
+                id_anuncio,
+                cod_livro 
+                from tb_livro 
+                inner join tb_anuncio on id_livro = cod_livro
+                where cod_usuario = '$id'";
+
                 $resultado = mysqli_query($conn, $sql);
                 if($resultado-> num_rows > 0){
                     while($row = mysqli_fetch_assoc($resultado)){
                         $id_anuncio = $row["id_anuncio"];
-                        $cod_usuario = $row['cod_usuario'];
+                        $cod_livro = $row['cod_livro'];
                         $titulo = $row['titulo'];
                         $autor = $row['autor'];
-                        $avaliacao = $row['avaliacao'];
+
                         /*
                         $titulo = rawurlencode($titulo);
                         $url = 'https://serpapi.com/search.json?q='.$titulo.'&tbm=isch&ijn=0&api_key=8f46ed9a3176f2e7a114f81ad9385f04958e2d567b08c732f5a57f8e69a8cf5a';
@@ -45,7 +64,7 @@
 
                         $titulo = rawurldecode($titulo);*/
 
-                        $sqle = "select * from tb_foto_anuncio where cod_anuncio = '$id_anuncio'";
+                        $sqle = "select * from tb_foto_anuncio where cod_anuncio = '$id_anuncio' order by cod_anuncio";
                         $result = mysqli_query($conn, $sqle);
                         $row = mysqli_fetch_assoc($result);
                         $foto = $row['fotos_livro'];
@@ -54,7 +73,8 @@
                         
                         echo "
                         <td>
-                            <a class='card card_anuncios' href = 'tela_anuncio_livro.php' style = 'color:black;'> 
+                        <div class = 'card card_anuncios'>
+                            <a href = 'tela_anuncio_livro.php' style = 'color:black;'> 
                                 <img style = 'border-radius: 20px;margin-top:20px; width: 250px; height:350px; margin-left:auto;margin-right:auto;' src='fotos_livro/$foto' class='card-img-top'>
                                 <div class='card-body'>
                                     <h5 class='card-title'> $titulo </h5>
@@ -62,11 +82,11 @@
                                     
                                 </div>
                             </a> 
+                            
+                        </div>
                         </td> 
                         "; 
                             
-
-                        //echo $id_anuncio;
                     }
 
                     

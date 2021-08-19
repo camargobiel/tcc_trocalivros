@@ -70,8 +70,18 @@ body {
 }
 
 .card_anuncios{
-    height: 550px;
+    height: 100%;
     margin-top: 20px;
     text-align: center;
-    width:300px;
+    width:400px;
+}
+
+.excluir{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+.excluir{
+    color:white;
 }

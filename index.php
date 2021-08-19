@@ -36,7 +36,12 @@
     <tr>
     <?php 
 
-      $pegarTITULO = "select distinct titulo from tb_livro";
+      $pegarTITULO = "select distinct
+      id_livro, 
+      titulo,
+      cod_livro 
+      from tb_livro 
+      inner join tb_anuncio on id_livro = cod_livro";
       $resultado = mysqli_query($conn, $pegarTITULO);
 
       $sql = "select id_livro from tb_livro";

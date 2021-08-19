@@ -21,7 +21,7 @@
         }
     }
 
-    $sql = "update tb_anuncio set avaliacao = '$avaliacao', cod_livro = '$id_foto' where id_anuncio = '$id_anuncio'";
+    $sql = "update tb_anuncio set avaliacao = '$avaliacao' where id_anuncio = '$id_anuncio'";
     $resultado = mysqli_query($conn, $sql);
 
     if($resultado==true){
