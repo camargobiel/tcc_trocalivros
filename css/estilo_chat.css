@@ -1,0 +1,61 @@
+body{
+    background-color: #151515 !important;
+}
+.chat-estilo{
+    display: flex;
+    justify-content: center; 
+}
+#chat{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+    background: #6f26b86b;
+    width: 800px;
+    height: 70vh;
+    border-radius: 5px;
+    overflow: auto;
+}
+.mandando{
+    align-self: flex-end;
+    background: #732642;
+    border-radius: 10px;
+    margin: 10px;
+    color: #fff;
+    padding: 10px;
+}
+.recebendo{
+    align-self: flex-start;
+    background: #ff0000;
+    border-radius: 10px;
+    margin: 10px;
+    color: #fff;
+    padding: 10px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form input{
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 8px;
+    border: none;
+}
+.mensagem{
+    width: 450px;
+}
+form input::placeholder{
+    text-align: center;
+}
+.button{
+    background-color: #512c6b;
+    color: #fff;
+    border: none;
+    padding-right: 7px;
+    border-radius: 8px;
+}
+.recebendo{
+}
