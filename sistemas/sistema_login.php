@@ -12,13 +12,12 @@
 <body>
  <?php   
 
-
+        include ('sistema_conexao.php');
             /*pegando os dados vindos do formulario */
                 $email = $_POST["email"];
                 $senha = $_POST["senha"];
 			 
             /*1- definindo a conexao - local, usuario, senha e banco de dados*/
-			$conn=mysqli_connect("localhost", "root", "","bd_tcc");
         
             /*2- verificando se a conexao foi estabelecida */
              if($conn==true){
@@ -38,7 +37,7 @@
                         session_start();
                         $_SESSION["id"] = $dados["id_usuario"];
                         $_SESSION["email"]=$email;
-                        header("location:index.php");
+                        header("location:../telas/index.php");
                     }
 				 
 			    }		

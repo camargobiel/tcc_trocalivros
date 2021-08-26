@@ -4,29 +4,29 @@
   <title> Perfil </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=0.8">
-  <link href="css/estilo_perfil.css" rel="stylesheet" type="text/css">
-  <link href="css/navbar_items.css" rel="stylesheet" type="text/css">
-  <link href="css/hover.css" rel="stylesheet" type="text/css">
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="js/jquery-3.5.1.min.js"> </script>
-  <script type="text/javascript" src="js/bootstrap.min.js"> </script>
+  <link href="../css/estilo_perfil.css" rel="stylesheet" type="text/css">
+  <link href="../css/navbar_items.css" rel="stylesheet" type="text/css">
+  <link href="../css/hover.css" rel="stylesheet" type="text/css">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../js/jquery-3.5.1.min.js"> </script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"> </script>
 </head>
 <body>
   <?php
-      include ('conexao.php');
-      include ('navbar.php');
+       include ('../sistemas/sistema_navbar.php'); 
+       include ('../sistemas/sistema_conexao.php'); 
 
       $email = $_SESSION["email"];
       //$foto_perfil = $_POST["arquivo"];
       //echo $email;
       if(isset($_POST['cadastrar'])){
         if(($_FILES["arquivo"]["name"]!="")){
-          $pastaArquivos = 'fotos_perfil/';
+          $pastaArquivos = '../fotos_perfil/';
           $nomeArquivo = $_FILES["arquivo"]["name"];
           $nomeTemporario = $_FILES["arquivo"]["tmp_name"];
 
           if(move_uploaded_file($nomeTemporario,$pastaArquivos.$nomeArquivo)){
-            include "conexao.php";
+            include "../conexao.php";
           }
           $sql = "update tb_usuario set foto_perfil = '$nomeArquivo' where email = '$email'";
           $resultado = mysqli_query($conn, $sql);
@@ -45,7 +45,7 @@
     <table>
     <tr>
       <td style = "width:20%;">
-        <?php echo "<img name = 'foto_perfil' class = 'foto_perfil' src = 'fotos_perfil/". $foto_perfil ."'>";?>
+        <?php echo "<img name = 'foto_perfil' class = 'foto_perfil' src = '../fotos_perfil/". $foto_perfil ."'>";?>
         <form action="" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <input type="file" id="arquivo" name = "arquivo" class = "select_imagem"><br>
@@ -69,7 +69,7 @@
               <div class = "dados"> <b> Senha: </b>'."*****".'</div>
               <div class = "dados"> <b> Cep: </b>'.$cep.' </div>
             </div>
-              <a href = "tela_alterar_perfil.php" class = "hvr-sweep-to-right" style = "width:50%;margin-left:30%; margin-top:20px; background-color:#301b3f;color:white;border-width:0;border-radius:10px;font-size:17px;text-align:center;"> Alterar dados cadastrais</a>
+              <a href = "../telas/tela_alterar_perfil.php" class = "hvr-sweep-to-right" style = "width:50%;margin-left:30%; margin-top:20px; background-color:#301b3f;color:white;border-width:0;border-radius:10px;font-size:17px;text-align:center;"> Alterar dados cadastrais</a>
             </td>
             ';     
         

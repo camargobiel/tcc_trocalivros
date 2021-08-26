@@ -1,5 +1,5 @@
 <?php 
-        include ('conexao.php');
+        include ('sistema_conexao.php');
         session_start();
         $email = $_SESSION["email"];
         
@@ -28,7 +28,7 @@
 
             $inserirIDLivro = "insert into tb_anuncio (cod_livro,cod_usuario) values ('$id_livro','$id')";
             $InserirLivro = mysqli_query($conn, $inserirIDLivro);
-            header('location: tela_anuncio_foto_livro.php');
+            header('location: ../telas/tela_cadastro_foto_livro.php');
         }else{
             $sql = "insert into tb_livro (titulo, autor) values ('$armazenaTitulo', '$strAutor')";
             $result = mysqli_query($conn, $sql);
@@ -43,7 +43,7 @@
 
                 $inserirIDLivro = "insert into tb_anuncio (cod_livro,cod_usuario) values ('$id_livro','$id')";
                 $InserirLivro = mysqli_query($conn, $inserirIDLivro);
-                header('location: tela_anuncio_foto_livro.php');
+                header('location: ../telas/tela_cadastro_foto_livro.php');
                 
             }else{
                 echo "nao foi possivel cadastrar";

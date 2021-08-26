@@ -4,22 +4,45 @@
     <title> Login </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <link href="css/navbar_items.css" rel="stylesheet" type="text/css">
-    <link href="css/estilo_anuncio.css" rel="stylesheet" type="text/css">
-    <link href="css/hover.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"> </script>
-    <script type="text/javascript" src="js/bootstrap.min.js"> </script>
-    <script src="js/scripts.js" type="text/javascript"> </script>
+    <link href="../css/navbar_items.css" rel="stylesheet" type="text/css">
+    <link href="../css/estilo_anuncio.css" rel="stylesheet" type="text/css">
+    <link href="../css/hover.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"> </script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"> </script>
+    <script src="../js/scripts.js" type="text/javascript"> </script>
 </head>
 <body> 
 <?php 
     
-    include ('conexao.php');
-    include ('navbar.php');
-    include('codAnuncio_idAnuncio.php');
+    include ('../sistemas/sistema_navbar.php'); 
+    include ('../sistemas/sistema_conexao.php');
     $email = $_SESSION["email"];
                 
+    $email = $_SESSION["email"];
+    $pegarID = "select * from tb_usuario where email = '$email'";
+    $resultado = mysqli_query($conn, $pegarID);
+    if($resultado->num_rows > 0){
+        while($row = mysqli_fetch_assoc($resultado)){
+            $id = $row["id_usuario"];
+        }
+    }
+                
+    $sql = "select * from tb_foto_anuncio where cod_anuncio = '$id'";
+    $resultado = mysqli_query($conn, $sql);
+    if($resultado->num_rows > 0){
+        while($row = mysqli_fetch_assoc($resultado)){
+            $foto_livro = $row["fotos_livro"];
+        }
+    }
+
+    $sql = "select * from tb_anuncio where cod_usuario = '$id'";
+        $resultado = mysqli_query($conn, $sql);
+        if($resultado-> num_rows > 0){
+            while($row = mysqli_fetch_assoc($resultado)){
+                $id_anuncio = $row["id_anuncio"];
+            }
+        }
 
     if (!empty($_POST['titulo'])) {
         $titulo = rawurlencode($_POST["titulo"]);
@@ -36,7 +59,7 @@
     
         ?>
     <h1 class = "titulo texto"> Cadastrar livro </h1>
-    <form action="tela_anuncio_livro.php" method = "POST">
+    <form action="tela_cadastro_livro.php" method = "POST">
         <div class = "container_cadastro">
             <div class="mb-3"> 
                 <label for="titulo" class="form-label titulo_livro_input texto"> Título do livro </label> 
@@ -48,7 +71,7 @@
 
     
 
-    <form action = "sistema_cadastrar_livro.php" method = "POST">
+    <form action = "../sistemas/sistema_cadastrar_livro.php" method = "POST">
         <div class = "container_cadastro">  
         <div class="mb-3"> 
                 <label for="titulo_livro" class="form-label texto"> Titulo </label> 

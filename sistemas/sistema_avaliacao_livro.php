@@ -1,6 +1,7 @@
 <?php 
-    include('conexao.php');
+
     session_start();
+    include ('sistema_conexao.php');
     $avaliacao = $_POST["avaliacao"];
     $id_foto = $_POST["id_foto"];
 
@@ -25,10 +26,9 @@
     $resultado = mysqli_query($conn, $sql);
 
     if($resultado==true){
-        header('location: index.php');
+        header('location: ../telas/index.php');
     }else{
-        header('location: tela_anuncio_livro.php');
+        header('location: ../telas/tela_anuncio_livro.php');
     }
-
 
 ?>
