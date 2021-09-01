@@ -26,13 +26,13 @@
       </div>
 
       <div class = "fixado">
-        <form class="d-flex">
-          <!-- BARRA DE PESQUISA -->
-          <input class="form-control barra_pesquisa" type="search" placeholder="Pesquisar livros" aria-label="Search" required>
-            &nbsp;
-            <a href = "telas/tela_pesquisar.php"> 
-              <button class="botao_pesquisar hvr-sweep-to-right" type="submit">  Pesquisar </button>  <!-- BOTAO PESQUISAR -->
-            </a>
+        <form action = "tela_pesquisa.php" class="d-flex">
+          <input name = "pesquisarLivro" id = "pesquisarLivro" class="form-control barra_pesquisa" type="text" placeholder="Pesquisar livros" aria-label="Search" required>
+            &nbsp;<a href = "telas/tela_pesquisar.php"> 
+                    <button type = "submit" class="botao_pesquisar hvr-sweep-to-right" type="submit">  
+                      Pesquisar 
+                    </button> 
+                  </a>
         </form>
       </div>
 

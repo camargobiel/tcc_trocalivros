@@ -43,17 +43,19 @@
     //AQUI ESTA PEGANDO ID DO LIVRO
     $pegarIDLivro = "select id_livro from tb_livro";
     $resultadoIDLivro = mysqli_query($conn, $pegarIDLivro);
-
+    echo "<table class = 'tabela_livros_todos'>
+    <tr>
+    ";
     if($resultadoTitulo->num_rows > 0){
       while($row = mysqli_fetch_assoc($resultadoTitulo)){
-            
+        
         $titulo = $row['titulo']; //PEGANDO O TITULO DO LIVRO E O ARMAZENANDO 
         $titulo = rawurlencode($titulo); //TRANSFORMANDO O TITULO EM "CRU"
         
         $chaveApi = "8f46ed9a3176f2e7a114f81ad9385f04958e2d567b08c732f5a57f8e69a8cf5a"; //CHAVE DA API DE PESQUISA
 
         //USANDO UMA API DE PESQUISA NO GOOGLE IMAGENS, PEGA A CAPA DO LIVRO USANDO O TITULO FORNECIDO ANTERIORMENTE
-        $url = 'https://serpapi.com/search.json?q='.$titulo.'&tbm=isch&ijn=0&api_key='.$chaveApi; //CONSUMINDO A API
+        $url = 'https://serpapi.com/search.json?q='.$titulo.'capa&livro&tbm=isch&ijn=0&api_key='.$chaveApi; //CONSUMINDO A API
         $capa_livros = json_decode(file_get_contents($url));
         $capa = $capa_livros->images_results[0]->thumbnail; //ARMAZENANDO A CAPA NA VARIAVEL
             
@@ -61,20 +63,22 @@
         $id_livro_todos = $row2["id_livro"]; //PEGANDO O ID DO LIVRO
 
         //AQUI ESTA MOSTRANDO NA TELA A CAPA DOS LIVROS EM FORMA DE TABELA
+        $titulo = $titulo = rawurldecode($titulo);
         echo "
 
-          <table class = 'tabela_livros_todos'>
-            <tr>
+          
               <td> 
-                <a href = ''>  
+                <a href = 'tela_livro.php?titulo=$titulo&capa=$capa'>
                   <img src = '$capa' class = 'card_livro_todos' id = 'teste'>
                 </a>
               </td>
-            </tr>
-          </table>
+            
       
             ";
       }
+
+      echo "</tr>
+      </table>";
     }
     ?>
           

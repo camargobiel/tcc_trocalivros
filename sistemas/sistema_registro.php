@@ -22,54 +22,59 @@
     
     <!-- CHAMANDO ARQUIVOS SWEET ALERT -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+
   </head>
 <body>
 
 <?php 
     include ('sistema_conexao.php');
-
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $cep = $_POST["cep"];
-    $senha = $_POST["senha"];
     
-    $sql = "select * from tb_usuario where email = '$email'"; //PEGAR DADOS DO USUARIO
-    $search = mysqli_query($conn, $sql);
-    if(mysqli_num_rows($search) > 0){
-        echo "
-            <script type='text/javascript'>
-            Swal.fire(
-                confirmButtonText: '<a href='url'>LINK</a>'
-              )
-            </script>
-        ";
-        //echo '<script type="text/javascript">location.replace("../telas/tela_registro.php");</script>';
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $cep = $_POST["cep"];
+        $senha = $_POST["senha"];
+        
 
-    }else{
-        $sql = "insert into tb_usuario (nome, email, senha, cep) values ('$nome', '$email', '$senha', '$cep')";
-        $result = mysqli_query($conn, $sql);
-        if($result==true){
+        
+        $sql = "select * from tb_usuario where email = '$email'"; //PEGAR DADOS DO USUARIO
+        $search = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($search) > 0){
             echo "
-            <script type='text/javascript'>
-                Swal.fire('Any fool can use a computer')
-            </script>
-            ";
-            
-            //echo '<script type="text/javascript">location.replace("../telas/tela_login.php");</script>';
+                <script type='text/javascript'>
+                    alert('ja existe '); 
+                </script>
+                ";
         }else{
-            echo '
-            <script type="text/javascript">
-                alert("Erro ao gravar os dados!"); 
-            </script>
-            ';
-            echo '<script type="text/javascript">location.replace("../telas/tela_registro.php");</script>';
+            $sql = "insert into tb_usuario (nome, email, senha, cep) values ('$nome', '$email', '$senha', '$cep')";
+            $result = mysqli_query($conn, $sql);
+            if($result==true){
+                echo "
+                <script type='text/javascript'>
+                    alert('cadastrado'); 
+                </script>
+                ";
+                
+                echo '<script type="text/javascript">location.replace("../telas/tela_login.php");</script>';
+            }else{
+                echo "
+                <script type='text/javascript'>
+                    alert('Erro ao gravar os dados!'); 
+                </script>
+                ";
+                echo '<script type="text/javascript">location.replace("../telas/tela_registro.php");</script>';
+            }
+            
+            
         }
-        
-        
-}
+    
      
 ?>
+
+<script>
+    
+    
+</script>
+
 
 </body>
 </html>

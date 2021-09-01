@@ -7,91 +7,42 @@ body {
     
 }
 
-.capa_livro {
-    margin-top: 60px;
-    margin-left: 50px;
-    width: 400px;
-    float:left;
+.capa_livro{
+    margin-left: 10px;
+    width:250px;
+    border-radius: 20px;
 }
 
-.descricao_div {
-    width: 45rem;
-    height: 30rem;
-    margin-top: 30px;
-    margin-left: 500px;
-     
-}
-
-.titulo_livro {
-    margin-top: 60px;
-    margin-left: 500px;
+.titulo{ 
     color:white;
+    margin-left: 5%;
 }
 
-p {
-    word-wrap: break-word;
+.descricao{
     text-align: justify;
-    margin-right: 20px;
-    font: 16px Arial, sans-serif;
+    margin-top: 10px;
     color:white;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+    height: 400px;
 }
 
-.nome_autor {
-    color: white;
+.isbn{
+    color:white;
+    margin-left: 5%;
 }
 
-.div_anunciantes {
-    height: 100%;
-    width: 500px;
-    float:right;
-    display: inline-block;
-    margin-right: 100px;
-}
 
-.anunciantes {
-    height: 150px;
-    width: 450px;
-    background-color: #362e3b;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    margin: auto;  
-    margin-top: 20px;
-}
-
-.nome_anunciante {
-    margin-left: 15px;
-    display: inline-block;
-    font: 20px Arial, sans-serif;
-}
-
-.bairro_anunciante {
-    margin-left: 19px;
-    margin-top: 30px;
-    display: inline-block;
-    font: 15px Arial, sans-serif;
-}
-
-.livro_foto {
-    width: 100px;
-    height: 150px;
-    display: inline-block;
-    float: left;
+.capa_livro1{
     
+    width:121px;
+    height: 171px;
 }
 
-.estado_livro {
-    display: inline-block;
-    float: right;
-    margin-top:4px;
-    font: 20px Arial, sans-serif;
-}
-
-.avaliacao_estrelas {
-    width: 20px;
-    height: 20px;
-}
-
-.avaliacao {
-    float:right;
-    margin-right: 60px;
+.anuncio{
+    margin-right: 10px;
+    width: 500px;
+    height: 170px;
+    background-color: #151518;
 }

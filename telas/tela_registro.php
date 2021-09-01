@@ -25,7 +25,7 @@
 
   </head>
 <body>
-  <?php include ('../sistemas/sistema_navbar.php'); 
+  <?php include ('../sistemas/sistema_navbar.php');
   
   ?>
     <div class = "container">
@@ -54,13 +54,14 @@
           </div>
           <p> <a href = "tela_login.php"> Já tem cadastro? Faça o login aqui </a> </p>
           <button type="submit" class="btn" style="width: 100%; background-color: #5e17eb; color:white;" id="botao" name="botao"> Fazer registro </button> <!-- botao para registrar -->
+          <p  id = "teste">  </p>
         </form>
       </div> 
     </div>
   </body>
 </html>
 
-<script>                       
+<script>        
   function show() {
     var senha = document.getElementById("senha");
     if (senha.type === "password") {

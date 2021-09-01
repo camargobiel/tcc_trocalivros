@@ -57,7 +57,7 @@ $email = $_SESSION["email"];
                 $nomeTemporario = $_FILES["arquivo"]["tmp_name"];
       
                 if(move_uploaded_file($nomeTemporario,$pastaArquivos.$nomeArquivo)){
-                    include "../conexao.php";
+                    include "../sistemas/sistema_conexao.php";
                 }
 
                 $sql = "insert into tb_foto_anuncio (fotos_livro, cod_anuncio) values ('$nomeArquivo', '$id_anuncio')";

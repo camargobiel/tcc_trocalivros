@@ -9,4 +9,5 @@
 * 21/07/2021: Sistema de login e registro funcionando;
 * 23/07/2021: Sistema de foto de perfil funcionando;
 * 26/07/2021: Tela de perfil funcionando;
-* 13/08/2021: Cadastro de livro funcionando, faltando exibição.
+* 13/08/2021: Cadastro de livro funcionando, faltando exibição;
+* 26/08/2021: Exibição feita na tela inicial.

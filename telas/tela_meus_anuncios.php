@@ -30,30 +30,30 @@
             </td> 
             <?php 
 
-$email = $_SESSION["email"];
-$pegarID = "select * from tb_usuario where email = '$email'";
-$resultado = mysqli_query($conn, $pegarID);
-if($resultado->num_rows > 0){
-    while($row = mysqli_fetch_assoc($resultado)){
-        $id = $row["id_usuario"];
-    }
-}
-            
-$sql = "select * from tb_foto_anuncio where cod_anuncio = '$id'";
-$resultado = mysqli_query($conn, $sql);
-if($resultado->num_rows > 0){
-    while($row = mysqli_fetch_assoc($resultado)){
-        $foto_livro = $row["fotos_livro"];
-    }
-}
-
-$sql = "select * from tb_anuncio where cod_usuario = '$id'";
-    $resultado = mysqli_query($conn, $sql);
-    if($resultado-> num_rows > 0){
-        while($row = mysqli_fetch_assoc($resultado)){
-            $id_anuncio = $row["id_anuncio"];
+        $email = $_SESSION["email"];
+        $pegarID = "select * from tb_usuario where email = '$email'";
+        $resultado = mysqli_query($conn, $pegarID);
+        if($resultado->num_rows > 0){
+            while($row = mysqli_fetch_assoc($resultado)){
+                $id = $row["id_usuario"];
+            }
         }
-    }
+                    
+        $sql = "select * from tb_foto_anuncio where cod_anuncio = '$id'";
+        $resultado = mysqli_query($conn, $sql);
+        if($resultado->num_rows > 0){
+            while($row = mysqli_fetch_assoc($resultado)){
+                $foto_livro = $row["fotos_livro"];
+            }
+        }
+
+        $sql = "select * from tb_anuncio where cod_usuario = '$id'";
+            $resultado = mysqli_query($conn, $sql);
+            if($resultado-> num_rows > 0){
+                while($row = mysqli_fetch_assoc($resultado)){
+                    $id_anuncio = $row["id_anuncio"];
+                }
+            }
 
                 $pegarID = "select * from tb_usuario where email = '$email'";
                 $resultado = mysqli_query($conn, $pegarID);
@@ -63,7 +63,7 @@ $sql = "select * from tb_anuncio where cod_usuario = '$id'";
                     }
                 }
 
-                
+                $i = 0;    
 
                 $sql = "select
                 id_livro, 
@@ -98,21 +98,25 @@ $sql = "select * from tb_anuncio where cod_usuario = '$id'";
                             
                         
                         
-                        echo "
-                        <td>
-                        <div class = 'card card_anuncios'>
-                            <a href = 'tela_anuncio_livro.php' style = 'color:black;'> 
-                                <img style = 'border-radius: 20px;margin-top:20px; width: 250px; height:350px; margin-left:auto;margin-right:auto;' src='../fotos_livro/$foto' class='card-img-top'>
-                                <div class='card-body'>
-                                    <h5 class='card-title'> $titulo </h5>
-                                    <p class='card-text'> $autor </p>
-                                    
-                                </div>
-                            </a> 
+                            echo "
                             
-                        </div>
-                        </td> 
-                        "; 
+                                <td>
+                                <div class = 'card card_anuncios'>
+                                    <a href = 'tela_anuncio_livro.php' style = 'color:black;'> 
+                                        <img style = 'border-radius: 20px;margin-top:20px; width: 250px; height:350px; margin-left:auto;margin-right:auto;' src='../fotos_livro/$foto' class='card-img-top'>
+                                        <div class='card-body'>
+                                            <h5 class='card-title'> $titulo </h5>
+                                            <p class='card-text'> $autor </p>
+                                            <a class = 'excluir' href = '../sistemas/sistema_excluir_anuncio.php?id=$id_anuncio' > excluir </a>
+                                        </div>
+                                    </a> 
+                                </div>
+                                </td>
+                            
+                            ";
+                            
+                            
+                        
                             
                     }
 
@@ -126,10 +130,5 @@ $sql = "select * from tb_anuncio where cod_usuario = '$id'";
             ?>
         </tr>
     </table>
-
-    <?php 
-            
-    ?>
-    
 </body>
 </html>
