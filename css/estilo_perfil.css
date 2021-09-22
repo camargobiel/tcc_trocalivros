@@ -6,72 +6,13 @@ body {
     background-color: #151515 !important;
     
 }
-table{
-    border-radius: 30px;
-    background-color: #5e17eb;
-}
-.dados_area{
-    vertical-align: top;
-    padding: 60px;
-}
-
-
-.dados_campos{
-    border-radius: 20px;
-    height: 230px;
-    background-color: #301b3f;
-    width: 70%;
-    margin-left: 20%;
-    color:white;
-
-}
 
 .dados{
-    margin-top: 7px;
-    border-radius: 10px;
-    width: 60%;
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-
-.select_imagem{
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: #5e17eb;
-    border-width: 0;
+    margin-left:50px;
     color:white;
-    border-radius: 5px;
-}
-
-
-.btn_foto{
-    margin-left: 20px;
-    background-color: #301b3f;
-    border-width: 0;
-    color:white;
-    height: 50px;
-    width: 120px;
-    margin-top: 10px;
-    border-radius: 5px;
+    
 }
 
 .foto_perfil{
-    width:250px;
-    height:250px;
-    border-radius:200px;
-    margin-top:30px;
-    margin-left:30px;
-}
-
-.area_perfil{
-    margin-top: 10%;
-    margin-left: 25%;
-    margin-right: 20%;
-}
-
-.container_login{
-    margin-top: 10%;
-    margin-left: 25%;
-    margin-right: 25%;
+    border-radius: 50%;
 }

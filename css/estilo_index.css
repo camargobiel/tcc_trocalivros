@@ -39,7 +39,7 @@ body {
 }
 
 .card_livro_todos{
-    margin-left: 10px;
+    margin-left: 20px;
     width:170px;
     height: 250px;
     border-radius: 15px;
@@ -47,6 +47,10 @@ body {
 
 .card_livro_todos:hover{
     opacity: 0.2;
+}
+
+.boo{
+    width:500px;
 }
 
 @media only screen and (max-width: 700px){
@@ -76,6 +80,10 @@ body {
     .tabela_livros_todos{
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .boo{
+        width:400px;
     }
 
     

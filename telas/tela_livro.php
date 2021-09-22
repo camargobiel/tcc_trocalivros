@@ -1,7 +1,8 @@
+<?php $titulo = $_GET['titulo']; ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="pt">
   <head>
-    <title> Tela principal </title>
+    <title> <?php echo $titulo; ?> </title>
 
     <!-- TROCANDO A FOTO DO LINK DO SITE -->
     <link rel="shortcut icon" href="../imagens/celular_logo.png">
@@ -22,7 +23,7 @@
     <?php 
         include ('../sistemas/sistema_navbar.php'); 
         include ('../sistemas/sistema_conexao.php'); 
-        $titulo = $_GET['titulo'];
+        
         $capa = $_GET['capa'];
         
         $pegarIDLivro = "select id_livro from tb_livro where titulo = '$titulo'";
@@ -68,70 +69,31 @@
             <div style = "overflow: auto; height:700px;">
             <h1 style = 'color:white;text-align:center;margin-top:40px;'> Anúncios </h1><br>
             <?php 
+                $teste = "select * from tb_anuncio where cod_livro = '$id_livro'";
+                $teste2 = mysqli_query($conn, $teste);
+                while($row2 = mysqli_fetch_assoc($teste2)){
+                    $cod_anuncio = $row2["id_anuncio"];
+                    $avaliacao = $row2["avaliacao"];
 
-                $sql = "select fotos_livro,
-                cod_anuncio,
-                cod_usuario,
-                cod_livro,
-                avaliacao
-                from tb_foto_anuncio
-                inner join tb_anuncio on id_anuncio = cod_anuncio
-                where cod_livro = '$id_livro'";
-                $resultado = mysqli_query($conn, $sql);
-                if($resultado-> num_rows > 0){
-                    while($row = mysqli_fetch_assoc($resultado)){
-                        $foto_livro = $row["fotos_livro"];
-                        $avaliacao = $row["avaliacao"];
-                        
-                        if($avaliacao==5){
-                            $estrela = "<img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            ";
-                        }else if($avaliacao==4){
-                            $estrela = "<img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            ";
-                        }else if($avaliacao==3){
-                            $estrela = "<img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            ";
-                        }else if($avaliacao==2){
-                            $estrela = "<img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            ";
-                        }else{
-                            $estrela = "<img style = 'width:20px;' src = '../imagens/star.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            <img style = 'width:20px;' src = '../imagens/star1.png' ?>
-                            ";
-                        }
-                        
-                        
-                        echo "
-                        
-                            <div class = 'anuncio'> 
-                                <table>
-                                    <td>
-                                        <img class = 'capa_livro1' src = '../fotos_livro/$foto_livro'>
-                                        <div style = 'font-size:20px;float:right;margin-left:20px;color:white;'> Condição do livro: $estrela  </div>
-                                    </td>
-                                </table>
-                            </div> <br>";
-                    }
+                    $selectt = "select * from tb_foto_anuncio where cod_anuncio = '$cod_anuncio'";
+                    $teste3 = mysqli_query($conn, $selectt);
+                    $row3 = mysqli_fetch_assoc($teste3);
+                    $foto_livro = $row3["fotos_livro"];
+
+                    include('../sistemas/sistema_avaliacao.php');
+
+                    echo "
+                    <a href = 'tela_anuncio.php?id_anuncio=$cod_anuncio&avaliacao=$avaliacao'>
+                    <div class = 'anuncio'> 
+                        <table>
+                            <td>
+                                <img class = 'capa_livro1' src = '../fotos_livro/$foto_livro'>
+                                <div style = 'font-size:20px;float:right;margin-left:20px;color:white;'> Condição do livro: $estrela </div>
+                            </td>
+                        </table>
+                    </div> <br> </a>";
+
+                    
                 }
             
             ?>
@@ -139,12 +101,5 @@
             </td>
         </tr>
     </table>
-
-   
-
-
-
-
-
 </body>
 </html>

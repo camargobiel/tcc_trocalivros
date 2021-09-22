@@ -17,8 +17,7 @@
        include ('../sistemas/sistema_conexao.php'); 
 
       $email = $_SESSION["email"];
-      //$foto_perfil = $_POST["arquivo"];
-      //echo $email;
+
       if(isset($_POST['cadastrar'])){
         if(($_FILES["arquivo"]["name"]!="")){
           $pastaArquivos = '../fotos_perfil/';
@@ -41,18 +40,17 @@
           }
           
   ?>
-  <div class = "area_perfil">
     <table>
     <tr>
-      <td style = "width:20%;">
+      <td>
         <?php echo "<img name = 'foto_perfil' class = 'foto_perfil' src = '../fotos_perfil/". $foto_perfil ."'>";?>
         <form action="" method="POST" enctype="multipart/form-data">
           <div class="form-group">
-            <input type="file" id="arquivo" name = "arquivo" class = "select_imagem"><br>
+            <input type="file" id="arquivo" name = "arquivo" class = ""><br>
             <button type="submit" name="cadastrar" id="cadastrar" class = "btn_foto hvr-sweep-to-right"> Atualizar foto </button>
           </div> 
         </form>
-      </td>
+      </td> 
         <?php 
         $sql="select * from tb_usuario where email = '$email'";
         $result= mysqli_query($conn, $sql);
@@ -60,24 +58,26 @@
           $nome = $dados['nome'];
           $cep = $dados['cep'];
           $senha = $dados['senha'];
+          $tamanho = strlen($senha);
+          $i=0;
+          
+          
+          echo "
+          <td>
+            <div class = 'dados'> $nome </div>
+            <div class = 'dados'> $cep </div>
+            <div class = 'dados'> $senha </div>
+            <div class = 'dados'> $email </div>
+          </td>
+        ";
         }
+
         
-            echo '<td>
-            <div class = "dados_campos"> <br>
-              <div class = "dados"> <b> Nome: </b>'.$nome.' </div> 
-              <div class = "dados"> <b> Email: </b>'.$_SESSION["email"].' </div>
-              <div class = "dados"> <b> Senha: </b>'."*****".'</div>
-              <div class = "dados"> <b> Cep: </b>'.$cep.' </div>
-            </div>
-              <a href = "../telas/tela_alterar_perfil.php" class = "hvr-sweep-to-right" style = "width:50%;margin-left:30%; margin-top:20px; background-color:#301b3f;color:white;border-width:0;border-radius:10px;font-size:17px;text-align:center;"> Alterar dados cadastrais</a>
-            </td>
-            ';     
+ 
         
         ?> 
         
-      
     </tr>
     </table>
-  </div>
  </body>
  </html>

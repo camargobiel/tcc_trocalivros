@@ -12,12 +12,14 @@
     <script type="text/javascript" src="../js/bootstrap.min.js"> </script>
     <script src="../js/scripts.js" type="text/javascript"> </script>
 </head>
-<body> 
+<body>
+     
 <?php 
     
     include ('../sistemas/sistema_navbar.php'); 
     include ('../sistemas/sistema_conexao.php');
     $email = $_SESSION["email"];
+    echo "<img src = '../imagens/BooComTexto2.png' style = 'width:500px;position:fixed;margin-left:65%;'>"; 
                 
     $email = $_SESSION["email"];
     $pegarID = "select * from tb_usuario where email = '$email'";
@@ -63,9 +65,9 @@
         <div class = "container_cadastro">
             <div class="mb-3"> 
                 <label for="titulo" class="form-label titulo_livro_input texto"> Título do livro </label> 
-                <input type="text" class="form-control" name = "titulo">
+                <input type="text" class="form-control" name = "titulo" required>
             </div>
-            <button type="submit" class="btn" style="width: 100%; background-color: #301b3f;color:white;margin-bottom:10px;" id = "enviarLivro"> Buscar livro </button>
+            <button type="submit" class="btn" style="width: 100%; background-color: #301b3f;color:white;margin-bottom:10px;" id = "enviarLivro"> Buscar </button>
     </div>
     </form>
 
@@ -74,12 +76,12 @@
     <form action = "../sistemas/sistema_cadastrar_livro.php" method = "POST">
         <div class = "container_cadastro">  
         <div class="mb-3"> 
-                <label for="titulo_livro" class="form-label texto"> Titulo </label> 
-                <input id = "titulo_livro" type="text" class="form-control" name = "titulo_livro" value = "<?php if(!empty($_POST['titulo'])){echo $armazenaTitulo;} ?>">
+                <label for="titulo_livro" class="form-label texto"> Título </label> 
+                <input id = "titulo_livro" type="text" class="form-control" name = "titulo_livro" value = "<?php if(!empty($_POST['titulo'])){echo $armazenaTitulo;} ?>" required>
             </div>
             <div class="mb-3"> 
                 <label for="autor" class="form-label texto"> Autor(es) </label> 
-                <input id = "autor" type="text" class="form-control" name = "autor" value = "<?php if(!empty($_POST['titulo'])){print $strAutor;} ?>">
+                <input id = "autor" type="text" class="form-control" name = "autor" value = "<?php if(!empty($_POST['titulo'])){print $strAutor;} ?>" required>
             </div>
             <button type="submit" class="btn" style="width: 100%; background-color: #301b3f;color:white;"> Próximo </button>
         </div>

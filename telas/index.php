@@ -28,10 +28,11 @@
     include ('../sistemas/sistema_navbar.php'); 
     include ('../sistemas/sistema_conexao.php');
 
+    //BOO
+    echo "<center><img src = '../imagens/BooComTexto.png' class = 'boo''></center>"; 
+
     //MOSTRANDO OS DOIS TITULOS
     echo "
-    <h1 class = 'titulo'> Livros recomendados por nós </h1>
-
     <h1 class = 'titulo_todos'> Todos os anúncios </h1>
     
     ";
@@ -43,7 +44,7 @@
     //AQUI ESTA PEGANDO ID DO LIVRO
     $pegarIDLivro = "select id_livro from tb_livro";
     $resultadoIDLivro = mysqli_query($conn, $pegarIDLivro);
-    echo "<table class = 'tabela_livros_todos'>
+    echo "<table>
     <tr>
     ";
     if($resultadoTitulo->num_rows > 0){
@@ -65,16 +66,12 @@
         //AQUI ESTA MOSTRANDO NA TELA A CAPA DOS LIVROS EM FORMA DE TABELA
         $titulo = $titulo = rawurldecode($titulo);
         echo "
-
-          
-              <td> 
-                <a href = 'tela_livro.php?titulo=$titulo&capa=$capa'>
-                  <img src = '$capa' class = 'card_livro_todos' id = 'teste'>
-                </a>
-              </td>
-            
-      
-            ";
+          <td> 
+            <a href = 'tela_livro.php?titulo=$titulo&capa=$capa'> 
+              <img src = '$capa' class = 'card_livro_todos' id = 'teste'>
+            </a>
+          </td>
+        ";
       }
 
       echo "</tr>
