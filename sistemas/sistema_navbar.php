@@ -52,7 +52,7 @@
           <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
             <li><a class='dropdown-item' href='../telas/tela_perfil.php'>Ver perfil</a></li> 
             <li><a class='dropdown-item' href='../telas/tela_meus_anuncios.php'> Meus anúncios </a></li>
-            <li><a class='dropdown-item' href='chat-index.php'> Chat </a></li>
+            <li><a class='dropdown-item' href='../chat-index.php'> Chat </a></li>
             <li><a class='dropdown-item' style = 'background-color:red; color:white;' href='../sistemas/sistema_sair.php'> Sair </a></li>
           </ul>
         </div>

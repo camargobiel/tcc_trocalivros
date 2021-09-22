@@ -58,14 +58,14 @@ $(document).ready(function() {
  
  function sendForm() {
  var msg_error = 'Ocorreu um erro';
- var msg_timeout = 'O servidor não está a responder';
+ var msg_timeout = 'O servidor não respondeu';
  var message = '';
  var form = $('#form_nickname');
  resetContentInsert();
  $.ajax({
  data: form.serialize(),
  url: form.attr('action'),
- type: form.attr('method'),
+ type: form.attr('method'), 
  dataType: "json",
  error: function(xhr, status, error) {
  if (status==="timeout") {

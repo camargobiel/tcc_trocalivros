@@ -1,5 +1,5 @@
 <?php
-include_once('conexao.php');
+include ('sistemas/sistema_conexao.php');
 session_start();
 
 $id_destinatario = $_SESSION['id_destino'];
