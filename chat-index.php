@@ -27,13 +27,32 @@
 </head>
 <body>
     <?php
-    include_once('sistemas/sistema_navbar.php');
+    include_once('sistemas/sistema_navbar.v2.php');
     ?>
     <div class="chat-estilo">
         <div id="chat">
         </div>
     </div>
    
+
+    <?php
+    include ('sistemas/sistema_conexao.php');
+    $id_remetente = $_SESSION['id'];            
+
+    $busca_id_destino = mysqli_query($conn, "SELECT DISTINCT destinatario_id from chat2 where remetente_id = $id_remetente");
+    while($busca = mysqli_fetch_array($busca_id_destino)){
+        $id_destinatario2 = $busca['destinatario_id'];
+        $busca_nome = mysqli_query($conn, "SELECT nome FROM tb_usuario where id_usuario = $id_destinatario2");
+        $row = mysqli_fetch_array($busca_nome);
+
+        echo $row['nome'] . "<br>";
+        
+
+        
+    };
+    
+
+    ?>
 
 
     <form method="post" action="chat-index.php">
@@ -54,7 +73,7 @@
         $busca = mysqli_fetch_array($busca_id_destino);
         $id_destinatario = $busca['id_usuario'];
         $_SESSION['id_destino'] = $id_destinatario;
-        $id_remetente = $_SESSION['id'];
+
 		$mensagem = $_POST['mensagem'];
 
         if($mensagem != "" or $id_destinatario != ""){

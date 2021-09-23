@@ -11,7 +11,7 @@ while ($key = mysqli_fetch_assoc($sql))
     if($key['remetente_id'] == $id_remetente){
     echo "<div class = 'mandando'>";
     echo $key['msg'];
-    echo "</div>";
+    echo "</div>";  
     }
     else{
     echo "<div class = 'recebendo'>";
