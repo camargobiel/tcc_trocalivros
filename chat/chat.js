@@ -19,7 +19,7 @@ button.addEventListener('click', (event) => {
         //Configurações
         type: 'POST',//Método que está sendo utilizado.
         dataType: 'html',//É o tipo de dado que a página vai retornar.
-        url: 'chat-index.php',//Indica a página que está sendo solicitada.        
+        url: 'mandar-msg.php',//Indica a página que está sendo solicitada.        
         //Dados para envio
         data: {
             msg : msg.value,
