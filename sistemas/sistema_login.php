@@ -37,6 +37,10 @@
                         session_start();
                         $_SESSION["id"] = $dados["id_usuario"];
                         $_SESSION["email"]=$email;
+                       
+                        
+                        $id_destinatario = $busca['id_usuario'];
+
                         header("location:../telas/index.php");
                     }
 				 
