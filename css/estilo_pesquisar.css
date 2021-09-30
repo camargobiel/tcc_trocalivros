@@ -8,80 +8,17 @@ body {
     
 }
 
-.titulo_principal {
-    color:white;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.card_livro {
+.card_livro_todos{
     width:200px;
-    float:left; 
-    margin-right:10px;
     border-radius: 20px;
-    height: 300px;
+}
+.card_livro_todos:hover{
+    opacity: 0.2;
 }
 
-.img_card {
-    width:200px;
-    height: 300px;
-    border-radius: 20px;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.livro_hover {
-    margin-top:40px;
-    position: relative;
-}
-
-.livro_hover:hover .img_card{
-    opacity: 0.3;
-}
-
-.livro_hover:hover .img_card_S{
-    opacity: 0.3;
-}
-
-.centralizar {
-    width: 10%;
-    margin: 0 auto;
-}
-
-.titulo_semelhantes {
-    margin-left:20px;
-    color:white;
-    text-align: center;
-    margin-top: 20px;
-    float:left;
-}
-
-.principal_div {
-    width: 1900px;
-    height:300px;
-}
-
-.centralizar_semelhantes {
-    margin-left:20px;
-    width:1800px;
-    height:200px;
-    
-}
-
-.card_livro_S {
-    width:100px;
-    float:left; 
-    margin-right:10px;
-    border-radius: 20px;
-    height: 150px;
-}
-
-.img_card_S {
-    width:100px;
-    height: 150px;
-    border-radius: 20px;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+@media only screen and (max-width: 700px){
+    .card_livro_todos{
+        width:250px;
+        border-radius: 20px;
+    }
 }

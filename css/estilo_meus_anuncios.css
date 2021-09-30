@@ -1,0 +1,32 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    background-color: #151515 !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo{
+    margin-top: 30px;
+    text-align: center;
+    color:white;
+
+}
+.cards-teste{
+    justify-content: CENTER;
+    display: flex;
+    width:100%;
+}
+
+.card-teste{
+    margin-left:20px;
+    margin-top:20px;
+    width:15%;
+}
+
+@media screen and (max-width: 600px) {
+    .card-teste{
+        width:50%;
+    }
+}

@@ -70,10 +70,11 @@ body {
 }
 
 .card_anuncios{
-    height: 100%;
     margin-top: 20px;
     text-align: center;
     width:400px;
+    float:left;
+    margin-left:20px;
 }
 
 .excluir{

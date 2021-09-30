@@ -54,9 +54,10 @@
         $titulo = rawurlencode($titulo); //TRANSFORMANDO O TITULO EM "CRU"
         
         $chaveApi = "8f46ed9a3176f2e7a114f81ad9385f04958e2d567b08c732f5a57f8e69a8cf5a"; //CHAVE DA API DE PESQUISA
+        $chaveApiReserva1 = "a6f10a5569e67e31354503a5aa62fc462cda5da3903cde7a0a1857d15f44f8ec";
 
         //USANDO UMA API DE PESQUISA NO GOOGLE IMAGENS, PEGA A CAPA DO LIVRO USANDO O TITULO FORNECIDO ANTERIORMENTE
-        $url = 'https://serpapi.com/search.json?q='.$titulo.'capa&livro&tbm=isch&ijn=0&api_key='.$chaveApi; //CONSUMINDO A API
+        $url = 'https://serpapi.com/search.json?q='.$titulo.'capa&livro&tbm=isch&ijn=0&api_key='.$chaveApiReserva1; //CONSUMINDO A API
         $capa_livros = json_decode(file_get_contents($url));
         $capa = $capa_livros->images_results[0]->thumbnail; //ARMAZENANDO A CAPA NA VARIAVEL
             

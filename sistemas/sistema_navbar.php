@@ -14,7 +14,7 @@
 
 </head>
 <body>
-  <nav class="navbar nav_bar_fixed navbar-expand-lg">
+  <nav class="navbar nav_bar_fixed sticky-top navbar-expand-lg">
     <div class="container-fluid"> 
       <a href = "index.php" class="navbar-brand"> <div class = "icone_nav_logo"> </div> </a> <!-- ICONE PRINCIPAL -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
