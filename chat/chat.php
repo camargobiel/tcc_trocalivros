@@ -3,7 +3,11 @@ include ('../sistemas/sistema_conexao.php');
 session_start();
 
 $id_destinatario = $_SESSION['id_destino'];
+
+print_r($id_destinatario);
+
 $id_remetente = $_SESSION['id'];
+
 $sql =  mysqli_query($conn ,"SELECT * from chat2 where remetente_id in ('$id_remetente','$id_destinatario') and destinatario_id in ('$id_remetente','$id_destinatario');");
 
 while ($key = mysqli_fetch_assoc($sql))
