@@ -8,11 +8,68 @@ body {
 }
 
 .dados{
-    margin-left:50px;
     color:white;
-    
 }
 
 .foto_perfil{
+    margin-bottom: 20px;
+    width:350px;
     border-radius: 50%;
+}
+
+.area_foto{
+    margin-right:5%;
+    float:left;
+    margin-top: 5%;
+    margin-left:20%;
+}
+
+.tudo_dados{
+    font-size:18px;
+    border-radius:10px;
+    margin-left:40%;
+    margin-right:30%;
+    background-color:#5e17eb;
+    margin-top:12%;
+}
+
+.bt_alterar{
+    margin-top:10px;
+    margin-bottom:30px;
+    background-color: #301b3f;
+    text-align: center;
+    color:white;
+    border-color:#301b3f;
+    font-size:16px;
+    
+}
+
+.arquivo{
+    background-color:#5e17eb;
+    color:white;
+}
+
+@media only screen and (max-width: 700px){
+    .tudo_dados{
+        font-size:18px;
+        border-radius:10px;
+        margin-left:20%;
+        margin-right:20%;
+        margin-top:95%;
+        text-align:center;
+        background-color:#5e17eb;
+       
+    }
+
+    .area_foto{
+        margin-right:5%;
+        float:left;
+        margin-top: 5%;
+        margin-left:15%;
+    }
+
+    
+
+    
+        
 }

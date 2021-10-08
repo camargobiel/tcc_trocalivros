@@ -40,17 +40,15 @@
           }
           
   ?>
-    <table>
-    <tr>
-      <td>
+    <div class = "area_foto">
         <?php echo "<img name = 'foto_perfil' class = 'foto_perfil' src = '../fotos_perfil/". $foto_perfil ."'>";?>
         <form action="" method="POST" enctype="multipart/form-data">
           <div class="form-group">
-            <input type="file" id="arquivo" name = "arquivo" class = ""><br>
-            <button type="submit" name="cadastrar" id="cadastrar" class = "btn_foto hvr-sweep-to-right"> Atualizar foto </button>
+            <input type="file" id="arquivo" name = "arquivo" class = "arquivo"><br>
+            <button type="submit" name="cadastrar" id="cadastrar" class = "bt_alterar"> Atualizar foto </button>
           </div> 
         </form>
-      </td> 
+    </div>
         <?php 
         $sql="select * from tb_usuario where email = '$email'";
         $result= mysqli_query($conn, $sql);
@@ -63,12 +61,17 @@
           
           
           echo "
-          <td>
-            <div class = 'dados'> $nome </div>
-            <div class = 'dados'> $cep </div>
-            <div class = 'dados'> $senha </div>
-            <div class = 'dados'> $email </div>
-          </td>
+          <div class = 'tudo_dados'><br>
+            <div class = 'dados'> <b> Nome: </b> $nome </div>
+            <div class = 'dados'> <b> CEP: </b> $cep </div>
+            <div class = 'dados'> <b> Senha </b> $senha </div>
+            <div class = 'dados'> <b> E-mail: </b> $email </div>
+            <form method='get' action='tela_alterar_perfil.php'>
+              <button type='submit' class = 'bt_alterar'> Alterar dados do perfil </button> 
+            </form>
+          </div>
+          
+          
         ";
         }
 
@@ -76,9 +79,6 @@
  
         
         ?> 
-        
-    </tr>
-    </table>
-    
+      
  </body>
  </html>
