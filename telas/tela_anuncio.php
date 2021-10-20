@@ -89,14 +89,23 @@
   </a>
 </div>
 </td>
-
 <?php include('../sistemas/sistema_avaliacao.php'); 
   echo "<td> <div style = 'font-size:20px;margin-left:100px;color:white;'> Condição do livro: $estrela </div> </td>";
 ?>
 </tr>
 </table>
+<button>AIAIAIAI</button> 
+<div class='chat-pequeno'>
+  <?php include_once('../chat/chat-index.php')  ?>
+</div>
+
+<script>
+const = document.getElement
+$()
 
 
-    
+</script>
+
+
 </body>
 </html>
