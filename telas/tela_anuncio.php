@@ -92,20 +92,44 @@
 <?php include('../sistemas/sistema_avaliacao.php'); 
   echo "<td> <div style = 'font-size:20px;margin-left:100px;color:white;'> Condição do livro: $estrela </div> </td>";
 ?>
+<td>
+<div class="chat">
+  <div class='chat-pequeno'>
+    <?php include_once('../chat/chat-index-pequeno.php');  ?>
+  </div>  
+  <button class'button-chat' id = 'button-chat'>AIAIAIAI</button>
+</div>
+</td>
 </tr>
 </table>
-<button>AIAIAIAI</button> 
-<div class='chat-pequeno'>
-  <?php include_once('../chat/chat-index.php')  ?>
-</div>
+
+
+ 
 
 <script>
-const = document.getElement
-$()
+var botao = document.getElementById('button-chat')
+var chat_pequeno = document.querySelector(".chat-pequeno")
+var c = 0
+botao.addEventListener("click", function(){
+  if(c == 1){
+    chat_pequeno.setAttribute('style', 'visibility: hidden')
+    c = 0
+  }
+  else if(c == 0){
+    chat_pequeno.setAttribute('style', 'visibility: visible')
+    c = 1
+  }
+  console.log(c)
+  
+})
+$(document).ready(function (){
+    $(document).on('click', '.button-chat', function(){
+      console.log('TÁ CLICANDO')
+    })
+})
 
 
 </script>
-
 
 </body>
 </html>
