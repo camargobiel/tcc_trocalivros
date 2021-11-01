@@ -39,11 +39,12 @@
         $sql = "select * from tb_usuario where email = '$email'"; //PEGAR DADOS DO USUARIO
         $search = mysqli_query($conn, $sql);
         if(mysqli_num_rows($search) > 0){
-            echo "
-                <script type='text/javascript'>
-                    alert('ja existe '); 
-                </script>
-                ";
+            echo "<script>
+            $(document).ready(function(){
+              $('#myModal').modal('show');
+            });
+          </script>";
+            
         }else{
             $sql = "insert into tb_usuario (nome, email, senha, cep) values ('$nome', '$email', '$senha', '$cep')";
             $result = mysqli_query($conn, $sql);
@@ -70,10 +71,22 @@
      
 ?>
 
-<script>
-    
-    
-</script>
+    <div style = 'background-image: url("../imagens/fundo.png");' class="modal fade show" id="myModal" tabindex="-1" role="dialog" style="display: block;" data-keyboard="false" data-backdrop="static">
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content' style = 'background-color:#4c00ff;'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id="staticBackdropLabel" style = "color:white;"> <b> E-mail já cadastrado! </b> </h5>
+                </div>
+                <div class='modal-body' style = "color:white;">
+                    <p> Tente novamente com outro E-mail ou faça o login </p>
+                </div>
+                <div class='modal-footer'>
+                    <a class = 'btn btn-dark' href = '../telas/tela_login.php'> Ir a tela de login </a>
+                    <a class = 'btn btn-warning' href = '../telas/tela_registro.php'> Voltar a tela de cadastro </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>

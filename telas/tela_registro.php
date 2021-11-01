@@ -41,12 +41,12 @@
           </div>
           
           <div class="mb-3">
-            <label for="cep" class="form-label" id = "inf_login"> Digite o CEP (Somente números): </label> 
-            <input type="number" class="form-control" id="cep"  name="cep" required> <!-- input do cep -->
+            <label for="cep" class="form-label" id = "inf_login" > Digite o CEP: </label> 
+            <input type="text" class="form-control" id="cep" minlength="8" name="cep" required> <!-- input do cep -->
           </div>
           <div class="mb-3">
             <label for="senha" class="form-label" id = "inf_login"> Senha: </label>
-            <input type="password" class="form-control" id="senha"  name="senha" required> <!-- input da senha -->
+            <input type="password" class="form-control" id="senha" minlength="8" name="senha" required> <!-- input da senha -->
             
             <label for="olho" id = "inf_login"> Ver senha </label>
             <input id = "olho" type="checkbox" onclick="show()"> 

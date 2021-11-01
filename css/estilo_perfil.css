@@ -27,22 +27,17 @@ body {
 .tudo_dados{
     font-size:18px;
     border-radius:10px;
-    margin-left:40%;
+    margin-left:50%;
     margin-right:30%;
-    background-color:#5e17eb;
     margin-top:12%;
 }
 
-.bt_alterar{
-    margin-top:10px;
-    margin-bottom:30px;
-    background-color: #301b3f;
-    text-align: center;
-    color:white;
-    border-color:#301b3f;
-    font-size:16px;
-    
+.container_login{
+    margin-top:4%;
+    margin-left:30%;
+    margin-right:30%;
 }
+
 
 .arquivo{
     background-color:#5e17eb;
@@ -57,8 +52,6 @@ body {
         margin-right:20%;
         margin-top:95%;
         text-align:center;
-        background-color:#5e17eb;
-       
     }
 
     .area_foto{

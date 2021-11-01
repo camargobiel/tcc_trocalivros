@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title></title>
+  <title> Alterar dados cadastrais </title>
   <meta charset="utf-8">
+  <!-- TROCANDO A FOTO DO LINK DO SITE -->
+  <link rel="shortcut icon" href="../imagens/celular_logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=0.8">
-  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+
+
+  <!-- CHAMANDO ARQUIVOS .CSS -->
+  <link href="../bootstrap_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../bootstrap_css/hover.css" rel="stylesheet" type="text/css">
   <link href="../css/estilo_perfil.css" rel="stylesheet" type="text/css">
-  <link href="../css/navbar_items.css" rel="stylesheet" type="text/css">
-  <link href="../css/hover.css" rel="stylesheet" type="text/css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  <!-- CHAMANDO ARQUIVOS .JS -->
+  <script type="text/javascript" src="../js/jquery-3.5.1.min.js"> </script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"> </script>
 
 </head>
 <body>
@@ -28,7 +34,7 @@
         $senha = $dados["senha"];
     }
 ?>
-
+<h1 style = 'color:white;text-align:center;margin-top:40px;'> Alterar dados cadastrais </h1>
 <div class = "container">
       <div class = "container_login">
         <form action = "../sistemas/sistema_alterar_perfil.php" method = "POST">
@@ -46,7 +52,7 @@
             <label for="cep" class="form-label" id = "inf_login"> <div style = "color:white;"> CEP </div> </label>
             <input type="text" class="form-control" name = "cep" id = "cep" value = "<?php echo $cep;  ?>" required> <!-- input da senha -->
           </div>
-          <input type="submit" name = "botao_atualizar" class="hvr-sweep-to-right btn" style="width: 100%; background-color: #301b3f;color:white;" id = "inf_login"> </input>
+          <input type="submit" value = "Alterar dados" name = "botao_atualizar" class="hvr-sweep-to-right btn" style="width: 100%; background-color: #301b3f;color:white;" id = "inf_login">
         </form>
       </div> 
     </div>

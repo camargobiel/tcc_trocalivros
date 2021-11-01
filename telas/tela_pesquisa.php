@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="pt">
   <head>
-    <title> Tela principal </title>
+    <?php $titulo_livro_pesquisa = $_GET["pesquisarLivro"]; ?>
+    <title> Pesquisa: <?php echo $titulo_livro_pesquisa; ?> </title>
+
+    <!-- TROCANDO A FOTO DO LINK DO SITE -->
+    <link rel="shortcut icon" href="../imagens/celular_logo.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link href="../bootstrap_css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -15,7 +19,7 @@
     <?php 
     include('../sistemas/sistema_conexao.php');
     include('../sistemas/sistema_navbar.php');
-        $titulo_livro_pesquisa = $_GET["pesquisarLivro"];
+        
 
         $titulo_livro_pesquisa = rawurlencode($titulo_livro_pesquisa);
         $chaveApi = "AIzaSyC4sWzWpIQc0ltz26lXDMxX-Wt24o4ejZ8";
@@ -45,7 +49,8 @@
               
           $titulo = rawurlencode($titulo);
           $chaveApiLivro = "8f46ed9a3176f2e7a114f81ad9385f04958e2d567b08c732f5a57f8e69a8cf5a";
-          $url = 'https://serpapi.com/search.json?q='.$titulo.'capa&livro&tbm=isch&ijn=0&api_key='.$chaveApiLivro;
+          $chaveApiReserva = "a6f10a5569e67e31354503a5aa62fc462cda5da3903cde7a0a1857d15f44f8ec";
+          $url = 'https://serpapi.com/search.json?q='.$titulo.'capa&livro&tbm=isch&ijn=0&api_key='.$chaveApiReserva;
           $capa_livros = json_decode(file_get_contents($url));
           $capa = $capa_livros->images_results[0]->thumbnail;
           echo "<h2 style = 'color:white;text-align:center; margin-bottom:40px; margin-top:40px;'> Pesquisa: $armazenaTitulo </h2>";

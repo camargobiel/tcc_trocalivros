@@ -26,31 +26,21 @@
 
 </head>
 <body>
-    <?php
-    if(){
-
-    }
-    include_once('../sistemas/sistema_navbar.v2.php');
-    ?>
     <div class="chat-estilo">
 
 
     <?php
     include ('../sistemas/sistema_conexao.php');
-    $id_remetente = $_SESSION['id'];
-          
+    $id_remetente = $_SESSION['id'];            
 
     $busca_id_destino = mysqli_query($conn, "SELECT DISTINCT destinatario_id from chat2 where remetente_id = $id_remetente");
     echo "<div class = 'box_msg_geral'> ";
-    $c = 0;
     while($busca = mysqli_fetch_array($busca_id_destino)){
-        $c = $c + 1;
         $id_destinatario2 = $busca['destinatario_id'];
         $busca_nome = mysqli_query($conn, "SELECT nome FROM tb_usuario where id_usuario = $id_destinatario2");
         $row = mysqli_fetch_array($busca_nome);
-        $nome_msg = $row['nome'];
 
-        echo "<div class = 'box_msg' data-nome = '$nome_msg'>" . $row['nome'] . "</div>";
+        echo "<div class = 'box_msg'> " . $row['nome'] . "</div>";
         
 
         
@@ -62,6 +52,8 @@
         </div>
     
     </div>
+   
+
 
     <form>
 		<input type="text" name="mensagem" placeholder="Digite uma mensagem..." class="mensagem" id = "mensagem">
@@ -76,7 +68,5 @@
 
 
 <script src="chat.js"></script>
-<script src="mostrar-conversa.js"></script>
-
 </body>
 </html>

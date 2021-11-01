@@ -47,7 +47,7 @@
 
         <div class='dropdown'>
           <button style = 'margin-right:70px; margin-left:10px; margin-top:5px; background-color:#5e17eb;' class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>
-            Pefil
+            Perfil
           </button>
           <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
             <li><a class='dropdown-item' href='../telas/tela_perfil.php'>Ver perfil</a></li> 
@@ -64,8 +64,7 @@
       echo "<a href = 'tela_login.php'> <button class='hvr-sweep-to-right botao_logar' type='submit'>  Fazer login </button> </a>"; 
     }
 
-  ?>
-      
+  ?>     
     </div>
   </nav>
 </body>
