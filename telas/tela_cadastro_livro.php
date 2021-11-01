@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="pt">
 <head>
-    <title> Login </title>
+    <title> Cadastrando anúncio </title>
     <meta charset="utf-8">
+    <!-- TROCANDO A FOTO DO LINK DO SITE -->
+    <link rel="shortcut icon" href="../imagens/celular_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link href="../css/navbar_items.css" rel="stylesheet" type="text/css">
     <link href="../css/estilo_anuncio.css" rel="stylesheet" type="text/css">
@@ -50,11 +52,24 @@
         $titulo = rawurlencode($_POST["titulo"]);
         $url = 'https://www.googleapis.com/books/v1/volumes?q='.$titulo.'&key=AIzaSyC4sWzWpIQc0ltz26lXDMxX-Wt24o4ejZ8';
         $livros = json_decode(file_get_contents($url));
-            $item = $livros->items[0];
-            $armazenaID = $item->id."<br>"; //string
-            $armazenaAutor = $item->volumeInfo->authors; //array
-            $armazenaTitulo = $item->volumeInfo->title; //string
-            $armazenaDescricao = $item->volumeInfo->description; //string
+        $item = $livros->items[0];
+        $i = 0;    
+            
+            if(isset($item->volumeInfo->description)==null){
+                while(isset($item->volumeInfo->description)==null){
+                    $item = $livros->items[$i];
+                    $armazenaID = $item->id."<br>"; //string
+                    $armazenaAutor = $item->volumeInfo->authors; //array
+                    $armazenaTitulo = $item->volumeInfo->title; //string
+                    $i++;
+                }
+                
+            }else{
+                $item = $livros->items[0];
+                $armazenaID = $item->id."<br>"; //string
+                $armazenaAutor = $item->volumeInfo->authors; //array
+                $armazenaTitulo = $item->volumeInfo->title; //string
+            }
             
             $strAutor = implode(', ', $armazenaAutor);
     } 

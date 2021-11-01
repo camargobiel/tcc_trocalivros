@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title> Perfil </title>
+  <title> Meu perfil </title>
   <meta charset="utf-8">
+      <!-- TROCANDO A FOTO DO LINK DO SITE -->
+      <link rel="shortcut icon" href="../imagens/celular_logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=0.8">
   <link href="../css/estilo_perfil.css" rel="stylesheet" type="text/css">
   <link href="../css/navbar_items.css" rel="stylesheet" type="text/css">
@@ -45,7 +47,7 @@
         <form action="" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <input type="file" id="arquivo" name = "arquivo" class = "arquivo"><br>
-            <button type="submit" name="cadastrar" id="cadastrar" class = "bt_alterar"> Atualizar foto </button>
+            <button type="submit" style = 'margin-top:20px;background-color:#5e17eb;border-color:#5e17eb;' name="cadastrar" id="cadastrar" class = "btn btn-primary"> Atualizar foto </button>
           </div> 
         </form>
     </div>
@@ -56,8 +58,8 @@
           $nome = $dados['nome'];
           $cep = $dados['cep'];
           $senha = $dados['senha'];
-          $tamanho = strlen($senha);
-          $i=0;
+
+          $senha = str_repeat("*", strlen($senha)); 
           
           
           echo "
@@ -67,7 +69,7 @@
             <div class = 'dados'> <b> Senha </b> $senha </div>
             <div class = 'dados'> <b> E-mail: </b> $email </div>
             <form method='get' action='tela_alterar_perfil.php'>
-              <button type='submit' class = 'bt_alterar'> Alterar dados do perfil </button> 
+              <button type='submit' style = 'margin-top:20px;background-color:#5e17eb;border-color:#5e17eb;' class = 'btn btn-primary'> Alterar dados do perfil </button> 
             </form>
           </div>
           

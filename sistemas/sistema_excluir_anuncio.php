@@ -15,7 +15,7 @@
         $resultado = mysqli_query($conn, $deleteImagens);
         
         unlink($pastaArquivos.$i);
-        header('location:../telas/tela_meus_anuncios.php');
+        header("location:../telas/tela_meus_anuncios.php");
     }else{
         echo "eita";
     }
