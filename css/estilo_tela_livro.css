@@ -4,7 +4,7 @@
 
 body {
     background-color: #151515 !important;
-    
+    overflow-x: hidden;
 }
 
 .capa_livro{
@@ -46,4 +46,20 @@ body {
     height: 170px;
     background-color: #151518;
 }
+<<<<<<< HEAD
 
+=======
+.chat-pequeno{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in .6s;
+    width: 300px;
+    transition: all
+}
+.chat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+>>>>>>> 6e8832b20fa3fe0756d13eba5ca8e697a0839b85

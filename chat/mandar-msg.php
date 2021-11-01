@@ -2,7 +2,7 @@
    const button = document.getElementById('submit')
 
 button.addEventListener('click', (event) => {
-    <?php 
+    <?php    
     include ('../sistemas/sistema_conexao.php');
         $destinatario = $_POST['destino'];
 
