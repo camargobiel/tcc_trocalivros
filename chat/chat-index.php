@@ -27,9 +27,6 @@
 </head>
 <body>
     <?php
-    if(){
-
-    }
     include_once('../sistemas/sistema_navbar.v2.php');
     ?>
     <div class="chat-estilo">

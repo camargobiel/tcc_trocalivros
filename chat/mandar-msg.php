@@ -15,16 +15,14 @@ $destinatario = 0;
     $id_remetente = $_SESSION['id'];
     print_r('ID REMETENtE: ' . $id_remetente);
 
- $mensagem = $_POST['msg'];
+    $mensagem = $_POST['msg'];
 
-
-button.addEventListener('click', (event) => {
-    <?php    
+    }
+       
     include ('../sistemas/sistema_conexao.php');
-        $destinatario = $_POST['destino'];
+    $destinatario = $_POST['destino'];
 
     if($mensagem != "" or $id_destinatario != ""){
     $sql =  mysqli_query($conn ,"INSERT INTO chat2(remetente_id, destinatario_id, msg) VALUES('$id_remetente', '$id_destinatario', '$mensagem')");
     }
-    }
-?>
+    ?>
