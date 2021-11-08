@@ -1,0 +1,92 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+.nav_bar_fixed { /* navbar */
+    background-color: #301b3f; 
+    width:100%;
+    height: 70px;
+ 
+}
+
+.icone_nav_logo {
+    background-image: url('../imagens/logo_teste.png');
+    background-repeat: no-repeat;
+    background-size: 150px;
+    width: 140px;
+    height: 60px;
+    position: relative;
+}
+
+.botao_pesquisar {
+    height:40px;
+    background-color: #5e17eb;
+    color:white;
+    border: 1px solid #151515;
+    border-radius: 4px;
+    margin-right:20px;
+    
+}
+
+.botao_logar {
+    height:40px;
+    background-color: #5e17eb;
+    color:white;
+    border: 1px solid #151515;
+    border-radius: 4px;
+    margin-right:20px;
+    
+}
+.fixado{
+    position: fixed;
+    left: calc(40% - 50px);
+}
+.barra_pesquisa {
+    width: 400px;
+}
+
+.center {
+    width: 55%;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 0 auto;
+    
+}
+
+@media only screen and (max-width: 700px){
+    .nav_bar_fixed { 
+        height: 150px;
+    }
+    
+    .icone_nav_logo {
+        background-image: url('../imagens/celular_logo.png');
+        background-repeat: no-repeat;
+        background-size: 90px;
+        width: 80px;
+        height: 80px;
+        position: relative;
+    }
+
+    .barra_pesquisa {
+        width: 150px;
+    }
+
+    .botao_logar {
+        margin-top: 10px;
+        height: 100%;
+        width: 200px;
+        
+    }
+
+    .fixado{
+        left: calc(40% - 50px);
+        position: inherit;
+    }
+    
+
+    
+
+    
+
+    
+}

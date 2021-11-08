@@ -46,21 +46,20 @@ body {
     height: 170px;
     background-color: #151518;
 }
-#button-chat{
+<<<<<<< HEAD
+
+=======
+.chat-pequeno{
+    visibility: hidden;
     display: flex;
+    flex-direction: column;
+    transition: all ease-in .6s;
+    width: 300px;
+    transition: all
+}
+.chat{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 4px 10px 4px 10px;
-    font-weight: 600;
-    border: none;
-    border-radius: 10px;
-    background-color: #5652BD;
-    
-    color: #fff;
 }
-#button-chat > img{
-    margin-right: 8px;
-}
-/* #chat-geral{
-    display: flex;
-    align-items: flex-end;
-} */
+>>>>>>> 6e8832b20fa3fe0756d13eba5ca8e697a0839b85

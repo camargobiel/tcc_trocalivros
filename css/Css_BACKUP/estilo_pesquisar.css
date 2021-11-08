@@ -1,0 +1,24 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    background-color: #151515 !important;
+    margin: 0;
+    
+}
+
+.card_livro_todos{
+    width:200px;
+    border-radius: 20px;
+}
+.card_livro_todos:hover{
+    opacity: 0.2;
+}
+
+@media only screen and (max-width: 700px){
+    .card_livro_todos{
+        width:250px;
+        border-radius: 20px;
+    }
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat - 4Trade</title>
-    <link href="../css/estilo_chat.css" rel="stylesheet" type="text/css">
+    <link href="../css/estilo_chat_pequeno.css" rel="stylesheet" type="text/css">
     <script src="chat-ajax.js"></script>
 
       <!-- TROCANDO A FOTO DO LINK DO SITE -->
@@ -68,5 +68,7 @@
 
 
 <script src="chat.js"></script>
+<script src="mostrar-conversa.js"></script>
+
 </body>
 </html>

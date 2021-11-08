@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
 
-    <!-- CHAMANDO ARQUIVOS  .CSS -->
+    <!-- CHAMANDO ARQUIVOS .CSS -->
     <link href="../bootstrap_css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../css/estilo_tela_livro.css" rel="stylesheet" type="text/css">
     <link href="../bootstrap_css/hover.css" rel="stylesheet" type="text/css">
@@ -27,18 +27,8 @@
 
     $id_anuncio = $_GET["id_anuncio"];
     $avaliacao = $_GET["avaliacao"];
-
-    $busca_id_anunciante = mysqli_query($conn, "SELECT cod_usuario from tb_anuncio where id_anuncio = '$id_anuncio';");
-    $busca = mysqli_fetch_array($busca_id_anunciante);
-    $id_anunciante = $busca['cod_usuario']; 
     
-    $busca_email_anunciante = mysqli_query($conn, "SELECT email from tb_usuario where id_usuario = '$id_anunciante';");
-    $busca = mysqli_fetch_array($busca_email_anunciante);
-    $email_anunciante = $busca['email']; 
-
-    $_SESSION['id_destino'] = $id_anunciante;
-
-    $_SESSION['id_anuncio'] = $id_anuncio;
+    $email = $_SESSION["email"];
     
     $sql = "select fotos_livro,
     cod_anuncio,
@@ -86,7 +76,7 @@
         }
     }
 
-    $selectUsuario = "select * from tb_usuario where email = '$email_anunciante'";
+    $selectUsuario = "select * from tb_usuario where email = '$email'";
     $resultadoUsuario = mysqli_query($conn, $selectUsuario);
     $rowUsuario = mysqli_fetch_assoc($resultadoUsuario);
     $nome = $rowUsuario["nome"];
@@ -111,6 +101,7 @@
 </td>
 
 <?php 
+  
 
   $url = 'https://viacep.com.br/ws/'.$cep.'/json/';
   $end = json_decode(file_get_contents($url));
@@ -120,27 +111,32 @@
   
   <td> 
     <h1 style = 'margin-bottom:100px;color:white;margin-left:100px;'> $titulo </h1>
-    <div style = 'font-size:20px;margin-left:100px;color:white;' id ='nome_anunciante' data-id='$id_anunciante'> <b> Nome: </b> $nome </div>
-    <div style = 'font-size:20px;margin-left:100px;color:white;'> <b> E-mail para contato: </b> $email_anunciante </div> 
+    <div style = 'font-size:20px;margin-left:100px;color:white;'> <b> Nome: </b> $nome </div>
+    <div style = 'font-size:20px;margin-left:100px;color:white;'> <b> E-mail para contato: </b> $email </div> 
     <div style = 'font-size:20px;margin-left:100px;color:white;'> <b> Bairro: </b> $end <a href = 'https://www.google.com.br/maps/search/$cep/' target='_blank'> Abrir no maps </a></div><br>
     <div style = 'font-size:20px;margin-left:100px;color:white;'> <b> Descrição do anúncio: </b> </div> <br>
     <div style = 'font-size:20px;margin-left:120px;color:white;'> $descricao_anuncio </div>
     <div style = 'font-size:20px;margin-left:100px;color:white;margin-top:50px;'> <b> Condição do livro: </b> $estrela </div>
-    <button style = 'font-size:20px;margin-left:210px;margin-top:20px;' class'button-chat' id = 'button-chat'><img src='../imagens/messenger.png'>Chat</button>
-    </td>
+  </td>
   
   
   ";
+include('../sistemas/sistema_avaliacao.php'); 
+  echo "<td> <div style = 'font-size:20px;margin-left:100px;color:white;'> Condição do livro: $estrela </div> </td>";
 ?>
-<td>
-<div id="chat-geral">
-  <div class='chat-pequeno' style='display: none; '>
-    <?php include_once('chat-pequeno/chat-index-pequeno.php');  ?>
+<!-- <td>
+<div class="chat">
+  <div class='chat-pequeno'>
+    <?php /* include_once('../chat/chat-index-pequeno.php');  */ ?>
   </div>  
-</div>  
-</td>
+  <button class = 'button-chat' id = 'button-chat'>AIAIAIAI</button>
+</div>
+</td> -->
 </tr>
-</table> 
+</table>
+
+
+ 
 
 <script>
 var botao = document.getElementById('button-chat')

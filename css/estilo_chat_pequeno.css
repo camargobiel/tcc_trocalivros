@@ -4,7 +4,6 @@ body{
 .chat-estilo{
     display: flex;
     justify-content: center; 
-    margin-top: 2vw;
 }
 #chat{
     display: flex;
@@ -13,11 +12,13 @@ body{
     margin-bottom: 10px;
     
     background: #6f26b86b;
-    width: 800px;
-    height: 70vh;
+    width: 350px;
+    height: 50vh;
     border-radius: 5px;
     overflow: auto;
-    margin-right: 218px;
+}
+#form-chat{
+    width: 420px;
 }
 .mandando{
     align-self: flex-end;
@@ -47,7 +48,7 @@ form input{
     border: none;
 }
 .mensagem{
-    width: 450px;
+    width: 270px;
 }
 form input::placeholder{
     text-align: center;
@@ -70,7 +71,7 @@ form input::placeholder{
 }
 .box_msg_geral{
     margin-top: 20px;
-    text-align: center;    
+    
 }
 .box_msg:hover{
     background-color: #303030;
@@ -80,6 +81,14 @@ form input::placeholder{
 .errorInput{
     border: 1px solid rgba(255, 0, 76, 0.767) !important;
 }
+
 .selecionado{
     background-color: #303030;
 }
+
+
+@media screen and (max-width: 954px){
+    #chat{
+        margin-right: 16%;
+    }
+}   

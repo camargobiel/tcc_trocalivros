@@ -57,8 +57,6 @@
           
           $chaveApi = "8f46ed9a3176f2e7a114f81ad9385f04958e2d567b08c732f5a57f8e69a8cf5a"; //CHAVE DA API DE PESQUISA
           $chaveApiReserva1 = "a6f10a5569e67e31354503a5aa62fc462cda5da3903cde7a0a1857d15f44f8ec";
-          
-          $chaveApiReserva2 = "303dde44746e1aa99d956c3ac21fe0f85cda7e254628b75585d1ea219a225c36";
 
           //USANDO UMA API DE PESQUISA NO GOOGLE IMAGENS, PEGA A CAPA DO LIVRO USANDO O TITULO FORNECIDO ANTERIORMENTE
           $url = 'https://serpapi.com/search.json?q='.$titulo.'&tbm=isch&ijn=0&api_key='.$chaveApiReserva1; //CONSUMINDO A API
