@@ -1,10 +1,12 @@
 <?php
 include ('../sistemas/sistema_conexao.php');
+if(!isset($_SESSION)){
 session_start();
-
+}
+if(isset($_SESSION['id_destino'])){
 $id_destinatario = $_SESSION['id_destino'];
-
-print_r($id_destinatario);
+}
+print_r('MEU PAU' . $id_destinatario);
 
 $id_remetente = $_SESSION['id'];
 

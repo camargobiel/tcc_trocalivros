@@ -37,20 +37,28 @@
     $id_remetente = $_SESSION['id'];
           
 
-    $busca_id_destino = mysqli_query($conn, "SELECT DISTINCT destinatario_id from chat2 where remetente_id = $id_remetente");
+    $busca_id_destino = mysqli_query($conn, "SELECT DISTINCT destinatario_id, remetente_id from chat2 where remetente_id = $id_remetente or destinatario_id = $id_remetente");
     echo "<div class = 'box_msg_geral'> ";
     $c = 0;
+    $lista_pessoas_conversas = array();
     while($busca = mysqli_fetch_array($busca_id_destino)){
         $c = $c + 1;
         $id_destinatario2 = $busca['destinatario_id'];
+        if($id_destinatario2 == $id_remetente){
+            $id_destinatario2 = $busca['remetente_id'];
+        }
         $busca_nome = mysqli_query($conn, "SELECT nome FROM tb_usuario where id_usuario = $id_destinatario2");
         $row = mysqli_fetch_array($busca_nome);
         $nome_msg = $row['nome'];
-
-        echo "<div class = 'box_msg' data-nome = '$nome_msg'>" . $row['nome'] . "</div>";
+        $ja_tem = False;
         
-
-        
+        if(in_array($nome_msg, $lista_pessoas_conversas)) {
+            $ja_tem = True;
+        } 
+        if($ja_tem == False){
+        echo "<div class = 'box_msg' data-nome = '$nome_msg'>" . $row['nome'] . "</div>";    
+    }
+    array_push($lista_pessoas_conversas, $nome_msg);   
     };
     echo "</div>";
 

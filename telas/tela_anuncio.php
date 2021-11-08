@@ -14,6 +14,7 @@
     <link href="../bootstrap_css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../css/estilo_tela_livro.css" rel="stylesheet" type="text/css">
     <link href="../bootstrap_css/hover.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">>
 
     <!-- CHAMANDO ARQUIVOS .JS -->
     <script type="text/javascript" src="../js/jquery-3.5.1.min.js"> </script>
@@ -27,6 +28,8 @@
 
     $id_anuncio = $_GET["id_anuncio"];
     $avaliacao = $_GET["avaliacao"];
+
+
 
     $busca_id_anunciante = mysqli_query($conn, "SELECT cod_usuario from tb_anuncio where id_anuncio = '$id_anuncio';");
     $busca = mysqli_fetch_array($busca_id_anunciante);
@@ -91,7 +94,7 @@
     $rowUsuario = mysqli_fetch_assoc($resultadoUsuario);
     $nome = $rowUsuario["nome"];
     $cep = $rowUsuario["cep"];
-
+    $_SESSION['nome_anunciante'] = $nome;
 
     include('../sistemas/sistema_avaliacao_livro.php'); 
     ?>
@@ -124,7 +127,7 @@
     <div style = 'font-size:20px;margin-left:100px;color:white;'> <b> E-mail para contato: </b> $email_anunciante </div> 
     <div style = 'font-size:20px;margin-left:100px;color:white;'> <b> Bairro: </b> $end <a href = 'https://www.google.com.br/maps/search/$cep/' target='_blank'> Abrir no maps </a></div><br>
     <div style = 'font-size:20px;margin-left:100px;color:white;'> <b> Descrição do anúncio: </b> </div> <br>
-    <div style = 'font-size:20px;margin-left:120px;color:white;'> $descricao_anuncio </div>
+    <div style = 'font-size:20px;margin-left:120px;color:white; width:460px;'> $descricao_anuncio </div>
     <div style = 'font-size:20px;margin-left:100px;color:white;margin-top:50px;'> <b> Condição do livro: </b> $estrela </div>
     <button style = 'font-size:20px;margin-left:210px;margin-top:20px;' class'button-chat' id = 'button-chat'><img src='../imagens/messenger.png'>Chat</button>
     </td>
@@ -154,13 +157,15 @@ botao.addEventListener("click", function(){
   else if(c == 0){
     chat_pequeno.setAttribute('style', 'visibility: visible')
     c = 1
-  }
+
   console.log(c)
-  
+  }
 })
+
 $(document).ready(function (){
-    $(document).on('click', '.button-chat', function(){
-      console.log('TÁ CLICANDO')
+    $(document).on('click', '#fechar-chat', function(){
+      chat_pequeno.setAttribute('style', 'visibility: hidden')
+      c = 0
     })
 })
 

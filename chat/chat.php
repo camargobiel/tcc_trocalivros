@@ -8,6 +8,8 @@ print_r($id_destinatario);
 
 $id_remetente = $_SESSION['id'];
 
+/* $query = "SELECT * from chat2 where remetente_id in ('$id_remetente','$id_destinatario') and destinatario_id in ('$id_remetente','$id_destinatario');"; */
+
 $sql =  mysqli_query($conn ,"SELECT * from chat2 where remetente_id in ('$id_remetente','$id_destinatario') and destinatario_id in ('$id_remetente','$id_destinatario');");
 
 while ($key = mysqli_fetch_assoc($sql))

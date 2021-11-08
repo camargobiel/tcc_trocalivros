@@ -28,7 +28,6 @@
 <body>
     <div class="chat-estilo">
 
-
     <?php
    /* include ('../sistemas/sistema_conexao.php');
     $id_remetente = $_SESSION['id'];
@@ -56,11 +55,13 @@
     
     </div>
 
-    <form>
+    <form class='form-msg'>
 		<input type="text" name="mensagem" placeholder="Digite uma mensagem..." class="mensagem" id = "mensagem">
-        <div class="button">
-        <input type="submit" id = "submit" value="Enviar" name = submit class="button"><img src="imagens/ponta-de-flecha-esquerda.png" alt="">
-        </div>
+        <span id='submit'><img src="../imagens/send.png" alt=""></span>
+       <!--  <div class="button">
+        
+        <input type="submit" id = "submit" value="" name = submit class="button"><img src="../imagens/send.png" alt="">
+        </div> -->
 		
 		
 	</form>
@@ -94,6 +95,7 @@
 })
 
 </script>
+
 <script src="chat-pequeno/chat.js"></script>
 
 </body>

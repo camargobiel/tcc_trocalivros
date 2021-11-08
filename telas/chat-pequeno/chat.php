@@ -4,7 +4,10 @@ session_start();
 
 $id_destinatario = $_SESSION['id_destino'];
 
-print_r($id_destinatario);
+echo "<div id='topo-chat'>";
+echo "<div class = 'nome_anunciane'>" . $_SESSION['nome_anunciante'] . "</div>";
+echo "<span id='fechar-chat'>X</span>";
+echo "</div>";
 
 $id_remetente = $_SESSION['id'];
 
