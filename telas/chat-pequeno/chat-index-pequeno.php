@@ -55,7 +55,7 @@
     
     </div>
 
-    <form class='form-msg'>
+    <form class='form-msg' onsumbit='return False;'>
 		<input type="text" name="mensagem" placeholder="Digite uma mensagem..." class="mensagem" id = "mensagem">
         <span id='submit'><img src="../imagens/send.png" alt=""></span>
        <!--  <div class="button">
@@ -93,6 +93,17 @@
         })
     })
 })
+
+//Impedir que o enter envie o formulário
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+
 
 </script>
 

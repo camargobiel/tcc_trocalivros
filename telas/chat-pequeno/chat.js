@@ -33,6 +33,7 @@ button.addEventListener('click', (event) => {
     }).done(function(data){
         console.log('TÁ MANDANDO PRO MANDAR-MSG.PHP')
         $('#mensagem').val('')
+        //Rolar scroll para baixo
 
     })
     }

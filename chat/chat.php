@@ -2,10 +2,12 @@
 include ('../sistemas/sistema_conexao.php');
 session_start();
 
-$id_destinatario = $_SESSION['id_destino'];
-
-print_r($id_destinatario);
-
+if(isset($_POST['data_id'])){
+    $id_destinatario = $_POST['data_id'];
+    $_SESSION['id_destinatario'] = $_POST['data_id'];
+}else{
+    $id_destinatario = $_SESSION['id_destinatario'];
+}
 $id_remetente = $_SESSION['id'];
 
 /* $query = "SELECT * from chat2 where remetente_id in ('$id_remetente','$id_destinatario') and destinatario_id in ('$id_remetente','$id_destinatario');"; */

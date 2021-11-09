@@ -56,7 +56,7 @@
             $ja_tem = True;
         } 
         if($ja_tem == False){
-        echo "<div class = 'box_msg' data-nome = '$nome_msg'>" . $row['nome'] . "</div>";    
+        echo "<div class = 'box_msg' data-nome = '$nome_msg' data-id='$id_destinatario2'> " . $row['nome'] . "</div>";    
     }
     array_push($lista_pessoas_conversas, $nome_msg);   
     };

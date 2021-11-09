@@ -145,12 +145,20 @@
 </tr>
 </table> 
 
+<script src="../js/notify.js"></script>
+
 <script>
 var botao = document.getElementById('button-chat')
 var chat_pequeno = document.querySelector(".chat-pequeno")
 var c = 0
+var id_anunciante = document.getElementById('nome_anunciante').dataset.id
+console.log(<?=$_SESSION["id"]?>)
 botao.addEventListener("click", function(){
-  if(c == 1){
+  if(id_anunciante == <?=$_SESSION["id"]?>){
+    console.log('NÃO VAI ABRIR, TU É O DONO DO ANÚNCIO')
+    $.notify("Você é o anunciante, não é possível conversar com você mesmo!", "error")
+  }
+  else if(c == 1){
     chat_pequeno.setAttribute('style', 'visibility: hidden')
     c = 0
   }
@@ -168,8 +176,10 @@ $(document).ready(function (){
       c = 0
     })
 })
+</script>
 
-
+<script>
+        $.notify.defaults({position: "right bottom"})
 </script>
 
 </body>

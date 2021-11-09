@@ -74,6 +74,7 @@ body {
  margin: 0px 0px 0px 0px;
 }
 #topo-chat{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -98,6 +99,7 @@ body {
     transition: all 0.2s ease; */
 
 }
+
 /* #fechar-chat:hover{
     background: rgb(68, 44, 44);
     transform: scale(1.1);

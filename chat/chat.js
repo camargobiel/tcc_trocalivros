@@ -1,17 +1,20 @@
 const button = document.getElementById('submit')
 
+$(document).on('click', '.box_msg',function(){
+    const id_conversador = $(this).attr("data-id");
+
+    console.log(id_conversador)
+
+
 button.addEventListener('click', (event) => {
     event.preventDefault()
-
-    
-
-
 
     console.log('TÁ CLICANDO')
 
     const msg = document.getElementById('mensagem')
 
     const destino = document.getElementById('destino')
+
 
     console.log(msg.value)
     console.log(destino.value)
@@ -27,6 +30,7 @@ button.addEventListener('click', (event) => {
         //Dados para envio
         data: {
             msg : msg.value,
+            id_conversador, id_conversador,
             destino: destino.value
         }
     }).done(function(data){
@@ -52,3 +56,4 @@ button.addEventListener('click', (event) => {
         destino.classList.remove("errorInput")
     }
 } )    
+})
