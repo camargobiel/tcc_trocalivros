@@ -79,7 +79,7 @@
 	</form>
     <?php    include_once('mandar-msg.php')          ?>
 
-
+   
 <script src="chat.js"></script>
 <script src="mostrar-conversa.js"></script>
 

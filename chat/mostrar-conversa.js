@@ -20,7 +20,7 @@
         }
     }).done(function(data){
         console.log('FUNCIONOU E MANDOU!!')
-        console.log(data)
+        /* console.log(data) */
         })
     })
 })

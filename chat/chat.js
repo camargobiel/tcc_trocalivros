@@ -1,14 +1,20 @@
 const button = document.getElementById('submit')
 
+var id_conversador;
+
 $(document).on('click', '.box_msg',function(){
-    const id_conversador = $(this).attr("data-id");
+    id_conversador = $(this).attr("data-id");
 
     console.log(id_conversador)
+})
 
 
 button.addEventListener('click', (event) => {
-    event.preventDefault()
 
+    console.log('ESSE É O ID CONVERSADOR PEGO NO CHAT.JS: ' + id_conversador)
+
+    event.preventDefault()
+    
     console.log('TÁ CLICANDO')
 
     const msg = document.getElementById('mensagem')
@@ -56,4 +62,3 @@ button.addEventListener('click', (event) => {
         destino.classList.remove("errorInput")
     }
 } )    
-})
