@@ -6,7 +6,11 @@ if(isset($_POST['data_id'])){
     $id_destinatario = $_POST['data_id'];
     $_SESSION['id_destinatario'] = $_POST['data_id'];
 }else{
+    if(isset($_SESSION['id_destinatario'])){
     $id_destinatario = $_SESSION['id_destinatario'];
+}else{
+    $id_destinatario = '';
+}
 }
 $id_remetente = $_SESSION['id'];
 

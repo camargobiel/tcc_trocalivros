@@ -68,12 +68,11 @@
     
     </div>
 
-    <form>
+    <form class='form-msg' onsumbit='return False;'>
 		<input type="text" name="mensagem" placeholder="Digite uma mensagem..." class="mensagem" id = "mensagem">
-        <div class="button">
-        <input type="submit" id = "submit" value="Enviar" name = submit class="button"><img src="imagens/ponta-de-flecha-esquerda.png" alt="">
-        </div>
-	</form>
+        <span id='submit'><img src="../imagens/send.png" alt=""></span>
+
+    </form>
     <?php    include_once('mandar-msg.php')          ?>
 
    
