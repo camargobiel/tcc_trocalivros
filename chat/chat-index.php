@@ -70,12 +70,9 @@
 
     <form>
 		<input type="text" name="mensagem" placeholder="Digite uma mensagem..." class="mensagem" id = "mensagem">
-        <input type="text" name="destino" placeholder="Para quem?" id = "destino">
         <div class="button">
         <input type="submit" id = "submit" value="Enviar" name = submit class="button"><img src="imagens/ponta-de-flecha-esquerda.png" alt="">
         </div>
-		
-		
 	</form>
     <?php    include_once('mandar-msg.php')          ?>
 

@@ -28,6 +28,12 @@
 <body>
     <div class="chat-estilo">
 
+    
+        <div id='topo-chat'>
+        <div class = 'nome_anunciane'> <?=$_SESSION['nome_anunciante']?> </div>
+        <span id='fechar-chat'>X</span>
+        </div>
+
     <?php
    /* include ('../sistemas/sistema_conexao.php');
     $id_remetente = $_SESSION['id'];
@@ -53,9 +59,7 @@
         <div id="chat">
         </div>
     
-    </div>
-
-    <form class='form-msg' onsumbit='return False;'>
+        <form class='form-msg' onsumbit='return False;'>
 		<input type="text" name="mensagem" placeholder="Digite uma mensagem..." class="mensagem" id = "mensagem">
         <span id='submit'><img src="../imagens/send.png" alt=""></span>
        <!--  <div class="button">
@@ -65,6 +69,9 @@
 		
 		
 	</form>
+    </div>
+
+
 
 <script>
         $(document).ready(function (){

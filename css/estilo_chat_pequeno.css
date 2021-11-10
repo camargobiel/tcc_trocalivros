@@ -4,16 +4,19 @@ body{
 .chat-estilo{
     display: flex;
     justify-content: center; 
+    flex-wrap: wrap-reverse;
+    align-items: end;
+    flex-direction: column;
+    margin-right: 20px;
 }
 #chat{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 34px;
     
     background: #6f26b86b;
     width: 350px;
-    height: 50vh;
+    height: 470px;
     border-radius: 5px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -61,14 +64,12 @@ form input::placeholder{
     font-size: 16px;
 }
 .form-msg{
-    margin-top: -10px;
     position: absolute;
-    margin-left: 44px;
     padding: 0px 6px 4px 6px;
     background: #6f26b86b;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-
+    margin-top: 528.8px;
     
 }
 

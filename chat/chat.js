@@ -19,13 +19,10 @@ button.addEventListener('click', (event) => {
 
     const msg = document.getElementById('mensagem')
 
-    const destino = document.getElementById('destino')
-
 
     console.log(msg.value)
-    console.log(destino.value)
 
-    if (msg.value != '' && destino.value != ''){
+    if (msg.value != ''){
         console.log('EAEE BOCA ')
         $.ajax
     ({
@@ -37,11 +34,9 @@ button.addEventListener('click', (event) => {
         data: {
             msg : msg.value,
             id_conversador, id_conversador,
-            destino: destino.value
         }
     }).done(function(data){
         $('#mensagem').val('')
-        $('#destino').val('')  
 
     })
     }
@@ -54,11 +49,5 @@ button.addEventListener('click', (event) => {
     else{
         msg.classList.remove("errorInput")
     }
-    if(destino.value == ''){
-        event.preventDefault()
-        destino.classList.add("errorInput")
-    }
-    else{
-        destino.classList.remove("errorInput")
-    }
+
 } )    

@@ -4,10 +4,6 @@ session_start();
 
 $id_destinatario = $_SESSION['id_destino'];
 
-echo "<div id='topo-chat'>";
-echo "<div class = 'nome_anunciane'>" . $_SESSION['nome_anunciante'] . "</div>";
-echo "<span id='fechar-chat'>X</span>";
-echo "</div>";
 
 $id_remetente = $_SESSION['id'];
 
@@ -26,5 +22,6 @@ while ($key = mysqli_fetch_assoc($sql))
     echo "</div>";
     }
 }
+
 
 ?>

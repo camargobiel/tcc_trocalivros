@@ -81,6 +81,9 @@ body {
     align-items: center;
     padding: 8px 0px 4px 15px;
     background-color: #d3d3d3;
+    width: 350px;
+    margin-top: 20px;
+
 }
 #fechar-chat{
     font-family: 'Montserrat', sans-serif;
