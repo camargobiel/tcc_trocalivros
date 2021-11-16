@@ -73,7 +73,7 @@
             echo "
               <div class='carousel-item active'>
                 <img class='d-block w-100' src='../fotos_livro/$fotoAnuncio[$indice_foto]' style = 'width:300px;height:600px; '>
-              </div>
+              </div>  
             ";
           }else{
             echo "

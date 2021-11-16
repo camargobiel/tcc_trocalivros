@@ -37,13 +37,24 @@
     $id_remetente = $_SESSION['id'];
           
 
-    $busca_id_destino = mysqli_query($conn, "SELECT DISTINCT destinatario_id, remetente_id from chat2 where remetente_id = $id_remetente or destinatario_id = $id_remetente");
+    $busca_id_destino = mysqli_query($conn, "SELECT DISTINCT destinatario_id, remetente_id, cod_anuncio from chat2 where remetente_id = $id_remetente or destinatario_id = $id_remetente");
     echo "<div class = 'box_msg_geral'> ";
     $c = 0;
     $lista_pessoas_conversas = array();
     while($busca = mysqli_fetch_array($busca_id_destino)){
         $c = $c + 1;
         $id_destinatario2 = $busca['destinatario_id'];
+        $cod_anuncio = $busca['cod_anuncio'];
+        //Buscando info do anúncio
+        $busca_info_ad = mysqli_query($conn, "SELECT cod_livro FROM tb_anuncio where id_anuncio = '$cod_anuncio'");
+        $buscando = mysqli_fetch_array($busca_info_ad);
+        $cod_livro = $buscando['cod_livro'];
+
+        $busca_info_livro = mysqli_query($conn, "SELECT titulo_correto FROM tb_livro where id_livro = '$cod_livro'");
+        $busco = mysqli_fetch_array($busca_info_livro);
+        $nome_livro = $busco['titulo_correto'];
+
+
         if($id_destinatario2 == $id_remetente){
             $id_destinatario2 = $busca['remetente_id'];
         }
@@ -56,7 +67,7 @@
             $ja_tem = True;
         } 
         if($ja_tem == False){
-        echo "<div class = 'box_msg' data-nome = '$nome_msg' data-id='$id_destinatario2'> " . $row['nome'] . "</div>";    
+        echo "<div class = 'box_msg' data-nome = '$nome_msg' data-id='$id_destinatario2' data-cod_anuncio = '$cod_anuncio' data-nome_livro = '$nome_livro'> " . $row['nome'] . "<div = class= 'nome_livro'>" . $nome_livro . "</div></div>";    
     }
     array_push($lista_pessoas_conversas, $nome_msg);   
     };

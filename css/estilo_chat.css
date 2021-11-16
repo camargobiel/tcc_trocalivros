@@ -91,7 +91,9 @@ form input::placeholder{
 #submit:hover{
     transform: scale(1.1);
 }
-
+.nome_livro{
+    font-weight: 400;
+}
 
 .errorInput{
     border: 1px solid rgba(255, 0, 76, 0.767) !important;
