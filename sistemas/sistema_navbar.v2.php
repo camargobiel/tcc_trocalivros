@@ -16,7 +16,7 @@
 <body>
   <nav class="navbar nav_bar_fixed navbar-expand-lg">
     <div class="container-fluid"> 
-      <a href = "telas/index.php" class="navbar-brand"> <div class = "icone_nav_logo"> </div> </a> <!-- ICONE PRINCIPAL -->
+      <a href = "../telas/index.php" class="navbar-brand"> <div class = "icone_nav_logo"> </div> </a> <!-- ICONE PRINCIPAL -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style = "margin-left:20px;">
@@ -26,9 +26,9 @@
       </div>
 
       <div class = "fixado">
-        <form action = "tela_pesquisa.php" class="d-flex">
+        <form action = "../telas/tela_pesquisa.php" class="d-flex">
           <input name = "pesquisarLivro" id = "pesquisarLivro" class="form-control barra_pesquisa" type="text" placeholder="Pesquisar livros" aria-label="Search" required>
-            &nbsp;<a href = "telas/tela_pesquisar.php"> 
+            &nbsp;<a href = "../telas/tela_pesquisar.php"> 
                     <button type = "submit" class="botao_pesquisar hvr-sweep-to-right" type="submit">  
                       Pesquisar 
                     </button> 
