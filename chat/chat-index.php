@@ -106,7 +106,6 @@
 </script>
 <?php 
    $buffer_js = ob_get_clean();
-    var_dump($buffer_js);
     endif;
 ?>
 
