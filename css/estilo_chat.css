@@ -79,6 +79,8 @@ form input::placeholder{
     margin: 5px;
     width: 200px;
     border-radius: 7px;
+    display: flex;
+    flex-direction: row;
 }
 .box_msg_geral{
     margin-top: 20px;
@@ -93,6 +95,11 @@ form input::placeholder{
 }
 .nome_livro{
     font-weight: 400;
+    max-width: 12ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 6px;
 }
 
 .errorInput{
@@ -100,4 +107,35 @@ form input::placeholder{
 }
 .selecionado{
     background-color: #929191;
+}
+
+.img-chat{
+    width: 40%;
+    border-radius: 6px;
+    margin-right: 4px;
+}
+.segunda-box{
+    display: flex;
+    flex-direction: column;
+    width: 69%;
+    margin-left: -10px;
+}
+
+.nome-box-msg{
+    margin-top: 15px;
+    max-width: 12ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.link-externo{
+    width: 19px;
+    margin-top: -10px;
+    transition: all .2s ease;   
+}
+.link-externo:hover{
+    transform: scale(1.1);
+}
+.box_msg > a{
+    margin-top: -7px;
 }

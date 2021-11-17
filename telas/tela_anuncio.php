@@ -22,7 +22,6 @@
   </head>
 <body>
     <?php 
-    
     include('../sistemas/sistema_conexao.php');
     include('../sistemas/sistema_navbar.php');
 
@@ -33,7 +32,7 @@
 
     $busca_id_anunciante = mysqli_query($conn, "SELECT cod_usuario from tb_anuncio where id_anuncio = '$id_anuncio';");
     $busca = mysqli_fetch_array($busca_id_anunciante);
-    $id_anunciante = $busca['cod_usuario']; 
+    $id_anunciante = $busca['cod_usuario'];   
     
     $busca_email_anunciante = mysqli_query($conn, "SELECT email from tb_usuario where id_usuario = '$id_anunciante';");
     $busca = mysqli_fetch_array($busca_email_anunciante);
@@ -118,7 +117,6 @@
   $url = 'https://viacep.com.br/ws/'.$cep.'/json/';
   $end = json_decode(file_get_contents($url));
   $end = $end -> bairro;
-
   echo "
   
   <td> 
