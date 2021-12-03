@@ -10,4 +10,6 @@
 * 23/07/2021: Sistema de foto de perfil funcionando;
 * 26/07/2021: Tela de perfil funcionando;
 * 13/08/2021: Cadastro de livro funcionando, faltando exibição;
-* 26/08/2021: Exibição feita na tela inicial.
+* 26/08/2021: Exibição feita na tela inicial;
+* 11/10/2021: Chat do anúncio feito;
+* 20/10/2021: Tela única do chat e chat do anúncio recebendo e mandando mensagens, funcionando 100%.
