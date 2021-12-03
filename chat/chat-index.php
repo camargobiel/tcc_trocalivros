@@ -95,12 +95,22 @@
    
 <script src="chat.js"></script>
 <script src="mostrar-conversa.js"></script>
+<script>
+    $('form-msg').submit(function() {
+        console.log('TÁ SUBMITANDO')
+  return false;
+});
+</script>
+
 
 <?php if (isset($_SESSION['id_destinatario'])): ?>
 <?php ob_start() ?>
 <script>
     const box_selecionado = document.getElementById('<?=$_SESSION['id_destinatario']?>');
     console.log(box_selecionado)
+
+    console.log('iaiaiaiaiai')
+
     $(box_selecionado).addClass('selecionado')
 
 </script>
@@ -109,6 +119,16 @@
     endif;
 ?>
 
+<script>
+    $(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
 
 </body>
 </html>

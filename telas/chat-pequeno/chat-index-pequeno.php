@@ -59,7 +59,7 @@
         <div id="chat">
         </div>
     
-        <form class='form-msg' onsumbit='return False;'>
+        <form class='form-msg'>
 		<input type="text" name="mensagem" placeholder="Digite uma mensagem..." class="mensagem" id = "mensagem">
         <span id='submit'><img src="../imagens/send.png" alt=""></span>
        <!--  <div class="button">
@@ -81,7 +81,7 @@
 
         $(".box_msg_geral > div").removeClass('selecionado');
         $(this).addClass('selecionado')
-
+        
         console.log(data_nome)
 
         $.ajax
